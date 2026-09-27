@@ -1,140 +1,158 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ابوالفضل رحیمی نسب</title>
+  <title>ابوالفضل رحیمی نسب</title>
 
-<style>
-* {
-  box-sizing: border-box;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: #0b1020;
-  color: white;
-  font-family: Tahoma, Arial, sans-serif;
-  text-align: center;
-}
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #080c18;
+      color: white;
+      font-family: Tahoma, Arial, sans-serif;
+    }
 
-.container {
-  width: 95%;
-  max-width: 1100px;
-  margin: auto;
-  padding: 30px 0;
-}
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 35px 0;
+    }
 
-h1 {
-  font-size: clamp(28px, 6vw, 50px);
-  margin: 20px 0 35px;
-}
+    .welcome {
+      text-align: center;
+      font-size: clamp(25px, 5vw, 45px);
+      margin: 20px 0 35px;
+    }
 
-.card {
-  background: #11182e;
-  border: 1px solid #ffffff15;
-  border-radius: 22px;
-  padding: 25px;
-  margin-bottom: 25px;
-}
+    .box {
+      background: #11182d;
+      border: 1px solid #ffffff18;
+      border-radius: 24px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 15px 40px #0005;
+    }
 
-.title {
-  font-size: 22px;
-  margin-bottom: 15px;
-}
+    .title {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
 
-.price {
-  font-size: 38px;
-  font-weight: bold;
-  direction: rtl;
-}
+    .price {
+      text-align: center;
+      font-size: clamp(30px, 7vw, 50px);
+      font-weight: bold;
+      direction: rtl;
+    }
 
-.status {
-  color: #9da8cc;
-  font-size: 13px;
-  margin-top: 8px;
-}
+    .status {
+      text-align: center;
+      margin-top: 10px;
+      color: #9ca7c7;
+      font-size: 13px;
+    }
 
-.chart {
-  width: 100%;
-  height: 650px;
-}
+    .chart {
+      width: 100%;
+      height: 650px;
+    }
 
-.tradingview-widget-container,
-.tradingview-widget-container__widget {
-  width: 100%;
-  height: 100%;
-}
+    .tradingview-widget-container {
+      width: 100%;
+      height: 100%;
+    }
 
-@media (max-width: 600px) {
-  .chart {
-    height: 500px;
-  }
-}
-</style>
+    .tradingview-widget-container__widget {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: 94%;
+      }
+
+      .box {
+        padding: 15px;
+      }
+
+      .chart {
+        height: 500px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+  <div class="container">
 
-  <!-- 1. متن سایت -->
-  <h1>
-    به سایت ابوالفضل رحیمی نسب خوش آمدید
-  </h1>
+    <!-- متن خوش آمدگویی -->
+    <h1 class="welcome">
+      به سایت ابوالفضل رحیمی نسب خوش آمدید
+    </h1>
 
 
-  <!-- 2. قیمت لحظه‌ای تتر -->
-  <div class="card">
+    <!-- قیمت لحظه ای تتر -->
+    <div class="box">
 
-    <div class="title">
-      💵 قیمت لحظه‌ای تتر
+      <div class="title">
+        💵 قیمت لحظه‌ای تتر
+      </div>
+
+      <div id="usdtPrice" class="price">
+        در حال دریافت...
+      </div>
+
+      <div id="status" class="status">
+        در حال اتصال به نوبیتکس...
+      </div>
+
     </div>
 
-    <div id="usdtPrice" class="price">
-      در حال دریافت...
-    </div>
 
-    <div id="status" class="status">
-      در حال اتصال به نوبیتکس...
-    </div>
+    <!-- نمودار TradingView -->
+    <div class="box">
 
-  </div>
+      <div class="title">
+        📈 نمودار لحظه‌ای BTC/USDT
+      </div>
 
+      <div class="chart">
 
-  <!-- 3. نمودار مستقیم TradingView -->
-  <div class="card">
+        <div class="tradingview-widget-container">
 
-    <div class="title">
-      📈 نمودار BTC/USDT
-    </div>
+          <div class="tradingview-widget-container__widget"></div>
 
-    <div class="chart">
+          <script
+            type="text/javascript"
+            src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js"
+            async>
+          {
+            "autosize": true,
+            "symbol": "BINANCE:BTCUSDT",
+            "interval": "15",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "1",
+            "locale": "en",
+            "enable_publishing": false,
+            "allow_symbol_change": true,
+            "calendar": false,
+            "support_host": "https://www.tradingview.com"
+          }
+          </script>
 
-      <div class="tradingview-widget-container">
-
-        <div class="tradingview-widget-container__widget"></div>
-
-        <script
-          type="text/javascript"
-          src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js"
-          async>
-        {
-          "autosize": true,
-          "symbol": "BINANCE:BTCUSDT",
-          "interval": "15",
-          "timezone": "Etc/UTC",
-          "theme": "dark",
-          "style": "1",
-          "locale": "en",
-          "enable_publishing": false,
-          "allow_symbol_change": true,
-          "calendar": false,
-          "support_host": "https://www.tradingview.com"
-        }
-        </script>
+        </div>
 
       </div>
 
@@ -142,67 +160,55 @@ h1 {
 
   </div>
 
-</div>
 
+  <script>
 
-<script>
+    async function getTetherPrice() {
 
-/* قیمت USDT/IRT نوبیتکس */
+      const price = document.getElementById("usdtPrice");
+      const status = document.getElementById("status");
 
-async function getUSDTPrice() {
+      try {
 
-  const price = document.getElementById("usdtPrice");
-  const status = document.getElementById("status");
+        const response = await fetch(
+          "https://api.nobitex.ir/v2/orderbook/USDTIRT"
+        );
 
-  try {
+        if (!response.ok) {
+          throw new Error("API Error");
+        }
 
-    const response = await fetch(
-      "https://api.nobitex.ir/v2/orderbook/USDTIRT"
-    );
+        const data = await response.json();
 
-    if (!response.ok) {
-      throw new Error("API Error");
+        const rialPrice = Number(data.lastTradePrice);
+
+        if (!rialPrice) {
+          throw new Error("Price not found");
+        }
+
+        const tomanPrice = Math.round(rialPrice / 10);
+
+        price.textContent =
+          tomanPrice.toLocaleString("fa-IR") + " تومان";
+
+        status.textContent =
+          "● قیمت از نوبیتکس";
+
+      } catch (error) {
+
+        price.textContent = "قیمت دریافت نشد";
+
+        status.textContent =
+          "اتصال به نوبیتکس برقرار نشد";
+
+      }
     }
 
-    const data = await response.json();
+    getTetherPrice();
 
-    let rialPrice = Number(data.lastTradePrice);
+    setInterval(getTetherPrice, 10000);
 
-    if (!rialPrice) {
-      throw new Error("Price not found");
-    }
-
-    /* ریال → تومان */
-
-    const tomanPrice = Math.round(rialPrice / 10);
-
-    price.textContent =
-      tomanPrice.toLocaleString("fa-IR") + " تومان";
-
-    status.textContent =
-      "آخرین قیمت نوبیتکس";
-
-  } catch (error) {
-
-    price.textContent = "قیمت دریافت نشد";
-
-    status.textContent =
-      "اتصال به نوبیتکس برقرار نشد";
-
-  }
-}
-
-
-/* دریافت قیمت */
-
-getUSDTPrice();
-
-
-/* بروزرسانی هر ۱۰ ثانیه */
-
-setInterval(getUSDTPrice, 10000);
-
-</script>
+  </script>
 
 </body>
 </html>
