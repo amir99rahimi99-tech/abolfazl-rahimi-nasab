@@ -6,7 +6,7 @@
 
   <title>ابوالفضل رحیمی نسب</title>
 
-  <!-- کتابخانه چارت کندلی -->
+  <!-- Lightweight Charts -->
   <script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
 
   <style>
@@ -101,7 +101,8 @@
 
   <h1>به سایت ابوالفضل رحیمی نسب خوش آمدید</h1>
 
-  <!-- قیمت تتر -->
+
+  <!-- قیمت لحظه‌ای تتر -->
   <div class="tether-box">
 
     <div class="tether-title">
@@ -119,7 +120,7 @@
   </div>
 
 
-  <!-- چارت USDT/IRT -->
+  <!-- چارت یک ساعته تتر -->
   <div class="usdt-chart-box">
 
     <div class="chart-title">
@@ -131,7 +132,7 @@
   </div>
 
 
-  <!-- TradingView قبلی -->
+  <!-- TradingView -->
   <div class="chart">
 
     <div class="tradingview-widget-container">
@@ -161,260 +162,375 @@
   </div>
 
 
-<script>
+  <script>
 
-  /* =========================
-     ساخت چارت USDT/IRT
-  ========================= */
+    /* =====================================
+       ساخت چارت
+    ===================================== */
 
-  const chartContainer =
-    document.getElementById("usdt-chart");
+    const chartContainer =
+      document.getElementById("usdt-chart");
 
-  const chart =
-    LightweightCharts.createChart(chartContainer, {
+    const chart =
+      LightweightCharts.createChart(chartContainer, {
 
-      layout: {
-        background: {
-          color: "#111827"
+        layout: {
+          background: {
+            color: "#111827"
+          },
+          textColor: "#d1d5db"
         },
-        textColor: "#d1d5db"
-      },
 
-      grid: {
-        vertLines: {
-          color: "#1f2937"
+        grid: {
+          vertLines: {
+            color: "#1f2937"
+          },
+          horzLines: {
+            color: "#1f2937"
+          }
         },
-        horzLines: {
-          color: "#1f2937"
+
+        rightPriceScale: {
+          borderColor: "#374151"
+        },
+
+        timeScale: {
+          borderColor: "#374151",
+          timeVisible: true,
+          secondsVisible: false
+        },
+
+        localization: {
+
+          timeFormatter: function(time) {
+
+            const date = new Date(time * 1000);
+
+            return date.toLocaleTimeString(
+              "fa-IR",
+              {
+                hour: "2-digit",
+                minute: "2-digit"
+              }
+            );
+
+          }
+
         }
-      },
-
-      rightPriceScale: {
-        borderColor: "#374151"
-      },
-
-      timeScale: {
-        borderColor: "#374151",
-        timeVisible: true,
-        secondsVisible: false
-      }
-
-    });
-
-
-  const candleSeries =
-    chart.addCandlestickSeries({
-
-      upColor: "#26a69a",
-      downColor: "#ef5350",
-
-      borderUpColor: "#26a69a",
-      borderDownColor: "#ef5350",
-
-      wickUpColor: "#26a69a",
-      wickDownColor: "#ef5350"
-
-    });
-
-
-  /* =========================
-     ذخیره کندل‌ها
-  ========================= */
-
-  let candles =
-    JSON.parse(
-      localStorage.getItem("usdtirt_h1_candles") || "[]"
-    );
-
-
-  if (candles.length > 0) {
-
-    candleSeries.setData(candles);
-
-  }
-
-
-  /* =========================
-     دریافت قیمت نوبیتکس
-  ========================= */
-
-  async function updateUSDT() {
-
-    const priceElement =
-      document.getElementById("usdt-price");
-
-    const timeElement =
-      document.getElementById("update-time");
-
-
-    try {
-
-      const response = await fetch(
-        "https://apiv2.nobitex.ir/market/stats?srcCurrency=usdt&dstCurrency=rls"
-      );
-
-
-      if (!response.ok) {
-        throw new Error("API Error");
-      }
-
-
-      const data =
-        await response.json();
-
-
-      const market =
-        data.stats["usdt-rls"];
-
-
-      if (!market) {
-        throw new Error("USDT market not found");
-      }
-
-
-      const price =
-        Number(market.latest);
-
-
-      /* قیمت نمایشی */
-
-      priceElement.textContent =
-        price.toLocaleString("fa-IR") + " ریال";
-
-
-      timeElement.textContent =
-        "آخرین معامله: " +
-        new Date().toLocaleTimeString("fa-IR");
-
-
-      /* =========================
-         زمان شروع کندل یک ساعته
-      ========================= */
-
-      const now =
-        Math.floor(Date.now() / 1000);
-
-
-      const hour =
-        Math.floor(now / 3600) * 3600;
-
-
-      /* =========================
-         اگر کندل جدید باشد
-      ========================= */
-
-      if (
-        candles.length === 0 ||
-        candles[candles.length - 1].time !== hour
-      ) {
-
-        const newCandle = {
-
-          time: hour,
-
-          open: price,
-
-          high: price,
-
-          low: price,
-
-          close: price
-
-        };
-
-
-        candles.push(newCandle);
-
-
-        candleSeries.update(newCandle);
-
-      }
-
-
-      /* =========================
-         به‌روزرسانی کندل جاری
-      ========================= */
-
-      else {
-
-        const current =
-          candles[candles.length - 1];
-
-
-        current.high =
-          Math.max(current.high, price);
-
-
-        current.low =
-          Math.min(current.low, price);
-
-
-        current.close =
-          price;
-
-
-        candleSeries.update(current);
-
-      }
-
-
-      /* =========================
-         ذخیره در مرورگر
-      ========================= */
-
-      localStorage.setItem(
-        "usdtirt_h1_candles",
-        JSON.stringify(candles)
-      );
-
-
-    } catch (error) {
-
-      console.error(error);
-
-
-      priceElement.innerHTML =
-        '<span class="error">خطا در دریافت قیمت</span>';
-
-
-      timeElement.textContent =
-        "اتصال به نوبیتکس برقرار نشد";
-
-    }
-
-  }
-
-
-  /* بار اول */
-
-  updateUSDT();
-
-
-  /* هر ۳۰ ثانیه */
-
-  setInterval(
-    updateUSDT,
-    30000
-  );
-
-
-  /* تنظیم اندازه چارت */
-
-  window.addEventListener(
-    "resize",
-    () => {
-
-      chart.applyOptions({
-
-        width:
-          chartContainer.clientWidth
 
       });
 
-    }
-  );
 
-</script>
+    const candleSeries =
+      chart.addCandlestickSeries({
+
+        upColor: "#26a69a",
+        downColor: "#ef5350",
+
+        borderUpColor: "#26a69a",
+        borderDownColor: "#ef5350",
+
+        wickUpColor: "#26a69a",
+        wickDownColor: "#ef5350"
+
+      });
+
+
+    /* =====================================
+       کندل‌های ذخیره شده
+    ===================================== */
+
+    let candles = [];
+
+    try {
+
+      candles =
+        JSON.parse(
+          localStorage.getItem(
+            "usdtirt_h1_candles"
+          ) || "[]"
+        );
+
+    } catch (e) {
+
+      candles = [];
+
+    }
+
+
+    if (candles.length > 0) {
+
+      candleSeries.setData(candles);
+
+    }
+
+
+    /* =====================================
+       گرفتن قیمت نوبیتکس
+    ===================================== */
+
+    async function updateUSDT() {
+
+      const priceElement =
+        document.getElementById("usdt-price");
+
+      const timeElement =
+        document.getElementById("update-time");
+
+
+      try {
+
+        const response =
+          await fetch(
+            "https://apiv2.nobitex.ir/market/stats?srcCurrency=usdt&dstCurrency=rls"
+          );
+
+
+        if (!response.ok) {
+
+          throw new Error("API Error");
+
+        }
+
+
+        const data =
+          await response.json();
+
+
+        const market =
+          data.stats["usdt-rls"];
+
+
+        if (!market) {
+
+          throw new Error(
+            "USDT market not found"
+          );
+
+        }
+
+
+        const price =
+          Number(market.latest);
+
+
+        /* قیمت بالای صفحه */
+
+        priceElement.textContent =
+          price.toLocaleString("fa-IR") +
+          " ریال";
+
+
+        timeElement.textContent =
+          "آخرین معامله: " +
+          new Date().toLocaleTimeString(
+            "fa-IR"
+          );
+
+
+        /* =================================
+           ساعت محلی دستگاه
+        ================================= */
+
+        const now =
+          new Date();
+
+
+        const year =
+          now.getFullYear();
+
+
+        const month =
+          now.getMonth();
+
+
+        const day =
+          now.getDate();
+
+
+        const localHour =
+          now.getHours();
+
+
+        /*
+          شناسه هر کندل:
+
+          مثال:
+
+          20:00
+          21:00
+          22:00
+          23:00
+        */
+
+        const hourKey =
+          year +
+          "-" +
+          month +
+          "-" +
+          day +
+          "-" +
+          localHour;
+
+
+        /* =================================
+           زمان نمایشی کندل
+        ================================= */
+
+        const candleTime =
+          Math.floor(
+            Date.UTC(
+              year,
+              month,
+              day,
+              localHour,
+              0,
+              0
+            ) / 1000
+          );
+
+
+        /* =================================
+           کندل قبلی
+        ================================= */
+
+        let current =
+          candles[candles.length - 1];
+
+
+        /* =================================
+           اگر کندل جدید است
+        ================================= */
+
+        if (
+          !current ||
+          current.hourKey !== hourKey
+        ) {
+
+          const newCandle = {
+
+            time: candleTime,
+
+            open: price,
+
+            high: price,
+
+            low: price,
+
+            close: price,
+
+            hourKey: hourKey
+
+          };
+
+
+          candles.push(
+            newCandle
+          );
+
+
+          candleSeries.update(
+            newCandle
+          );
+
+        }
+
+
+        /* =================================
+           اگر همان کندل است
+        ================================= */
+
+        else {
+
+          current.high =
+            Math.max(
+              current.high,
+              price
+            );
+
+
+          current.low =
+            Math.min(
+              current.low,
+              price
+            );
+
+
+          current.close =
+            price;
+
+
+          candleSeries.update(
+            current
+          );
+
+        }
+
+
+        /* =================================
+           ذخیره کندل‌ها
+        ================================= */
+
+        localStorage.setItem(
+          "usdtirt_h1_candles",
+          JSON.stringify(candles)
+        );
+
+
+      } catch (error) {
+
+        console.error(error);
+
+
+        priceElement.innerHTML =
+          '<span class="error">خطا در دریافت قیمت</span>';
+
+
+        timeElement.textContent =
+          "اتصال به نوبیتکس برقرار نشد";
+
+      }
+
+    }
+
+
+    /* =====================================
+       اجرای اولیه
+    ===================================== */
+
+    updateUSDT();
+
+
+    /* =====================================
+       بروزرسانی هر ۳۰ ثانیه
+    ===================================== */
+
+    setInterval(
+      updateUSDT,
+      30000
+    );
+
+
+    /* =====================================
+       تغییر اندازه صفحه
+    ===================================== */
+
+    window.addEventListener(
+      "resize",
+      function() {
+
+        chart.applyOptions({
+
+          width:
+            chartContainer.clientWidth
+
+        });
+
+      }
+    );
+
+
+  </script>
 
 </body>
 </html>
