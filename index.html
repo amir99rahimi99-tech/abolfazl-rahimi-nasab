@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>قیمت ارز | ابوالفضل رحیمی نسب</title>
+<title>قیمت بازار | ابوالفضل رحیمی نسب</title>
 
 <style>
 * {
@@ -54,57 +55,9 @@ header p {
   border-bottom: 1px solid #283657;
 }
 
-.update {
-  padding: 12px 18px;
-  color: #9ca8c7;
-  font-size: 13px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th {
-  background: #1c2745;
-  padding: 15px 10px;
-  color: #cbd5e1;
-}
-
-td {
-  padding: 15px 10px;
-  text-align: center;
-  border-bottom: 1px solid #283657;
-}
-
-tr:last-child td {
-  border-bottom: none;
-}
-
-.currency {
-  font-weight: bold;
-}
-
-.symbol {
-  color: #8fa0c4;
-  font-size: 13px;
-}
-
-.buy {
-  color: #36d399;
-  font-weight: bold;
-}
-
-.sell {
-  color: #ff7070;
-  font-weight: bold;
-}
-
-.notice {
+.tgju-box {
   padding: 15px;
-  font-size: 13px;
-  line-height: 2;
-  color: #aeb9d3;
+  overflow-x: auto;
 }
 
 footer {
@@ -115,211 +68,59 @@ footer {
 }
 
 @media (max-width: 600px) {
-
   header h1 {
     font-size: 22px;
   }
-
-  th, td {
-    padding: 12px 5px;
-    font-size: 13px;
-  }
-
-  .currency {
-    font-size: 13px;
-  }
-
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-  <h1>به سایت ابوالفضل رحیمی نسب خوش آمدید</h1>
-  <p>نرخ ارز و قیمت‌های صرافی</p>
+
+<h1>
+به سایت ابوالفضل رحیمی نسب خوش آمدید
+</h1>
+
+<p>
+قیمت لحظه‌ای بازار
+</p>
+
 </header>
+
 
 <div class="container">
 
   <div class="card">
 
     <div class="card-title">
-      💱 نرخ ارز
+      💰 قیمت‌های بازار
     </div>
 
-    <div class="update">
-    آخرین اطلاعات نمایش داده‌شده از نرخ‌های صرافی
+    <div class="tgju-box">
+
+      <tgju
+        type="market-overview"
+        items="137225,137207,137221,137222,137218"
+        columns="dot"
+        token="webservice">
+      </tgju>
+
     </div>
-
-    <table>
-
-      <thead>
-        <tr>
-          <th>ارز</th>
-          <th>نماد</th>
-          <th>خرید</th>
-          <th>فروش</th>
-        </tr>
-      </thead>
-
-      <tbody>
-
-        <tr>
-          <td class="currency">دلار آمریکا</td>
-          <td class="symbol">USD</td>
-          <td class="buy">۲٬۲۳۰٬۰۰۰</td>
-          <td class="sell">۲٬۲۶۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">یورو</td>
-          <td class="symbol">EUR</td>
-          <td class="buy">۲٬۵۷۰٬۰۰۰</td>
-          <td class="sell">۲٬۶۲۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">پوند انگلیس</td>
-          <td class="symbol">GBP</td>
-          <td class="buy">۲٬۹۰۰٬۰۰۰</td>
-          <td class="sell">۲٬۹۴۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">درهم امارات</td>
-          <td class="symbol">AED</td>
-          <td class="buy">۵۸۰٬۰۰۰</td>
-          <td class="sell">۶۰۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">لیر ترکیه</td>
-          <td class="symbol">TRY</td>
-          <td class="buy">۴۷٬۰۰۰</td>
-          <td class="sell">۵۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">یوان چین</td>
-          <td class="symbol">CNY</td>
-          <td class="buy">۲۰۰٬۰۰۰</td>
-          <td class="sell">۲۱۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">دلار استرالیا</td>
-          <td class="symbol">AUD</td>
-          <td class="buy">۱٬۵۵۰٬۰۰۰</td>
-          <td class="sell">۱٬۶۰۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">دلار کانادا</td>
-          <td class="symbol">CAD</td>
-          <td class="buy">۱٬۶۰۰٬۰۰۰</td>
-          <td class="sell">۱٬۶۶۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">فرانک سوئیس</td>
-          <td class="symbol">CHF</td>
-          <td class="buy">۲٬۶۰۰٬۰۰۰</td>
-          <td class="sell">۲٬۷۰۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">کرون سوئد</td>
-          <td class="symbol">SEK</td>
-          <td class="buy">۱۴۰٬۰۰۰</td>
-          <td class="sell">۱۵۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">کرون نروژ</td>
-          <td class="symbol">NOK</td>
-          <td class="buy">۱۳۷٬۰۰۰</td>
-          <td class="sell">۱۴۵٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">ین ژاپن</td>
-          <td class="symbol">JPY</td>
-          <td class="buy">۱۱٬۸۰۰</td>
-          <td class="sell">۱۳٬۸۰۰</td>
-        </tr>
-
-      </tbody>
-
-    </table>
-
-    <div class="notice">
-      ⚠️ قیمت‌ها ممکن است تغییر کنند. برای معاملات واقعی،
-      نرخ لحظه‌ای صرافی را بررسی کنید.
-    </div>
-
-  </div>
-
-
-  <div class="card">
-
-    <div class="card-title">
-      🪙 طلا و سکه
-    </div>
-
-    <table>
-
-      <thead>
-        <tr>
-          <th>نوع</th>
-          <th>خرید</th>
-          <th>فروش</th>
-        </tr>
-      </thead>
-
-      <tbody>
-
-        <tr>
-          <td>سکه گرمی</td>
-          <td class="buy">۳۲۰٬۰۰۰٬۰۰۰</td>
-          <td class="sell">۳۳۵٬۰۰۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td>ربع سکه</td>
-          <td class="buy">۶۲۰٬۰۰۰٬۰۰۰</td>
-          <td class="sell">۶۵۰٬۰۰۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td>نیم سکه</td>
-          <td class="buy">۱٬۲۰۰٬۰۰۰٬۰۰۰</td>
-          <td class="sell">۱٬۲۳۰٬۰۰۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td>سکه بهار آزادی</td>
-          <td class="buy">۲٬۳۳۰٬۰۰۰٬۰۰۰</td>
-          <td class="sell">۲٬۳۰۰٬۰۰۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td>سکه امامی</td>
-          <td class="buy">۲٬۳۵۰٬۰۰۰٬۰۰۰</td>
-          <td class="sell">۲٬۴۰۰٬۰۰۰٬۰۰۰</td>
-        </tr>
-
-      </tbody>
-
-    </table>
 
   </div>
 
 </div>
 
+
 <footer>
-  © ابوالفضل رحیمی نسب
+© ابوالفضل رحیمی نسب
 </footer>
+
+
+<script src="https://api.tgju.org/v1/widget/v2" defer></script>
 
 </body>
 </html>
