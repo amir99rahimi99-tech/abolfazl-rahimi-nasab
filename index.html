@@ -7,90 +7,732 @@
 <title>ابوالفضل رحیمی نسب | فروشگاه</title>
 
 <style>
-* {
-  box-sizing: border-box;
+*{
+  box-sizing:border-box;
 }
 
-body {
-  margin: 0;
-  background: #fff;
-  color: #222;
-  font-family: Tahoma, Arial, sans-serif;
+body{
+  margin:0;
+  background:#fff;
+  color:#222;
+  font-family:Tahoma,Arial,sans-serif;
 }
 
 /* نوار بالایی */
-.top {
-  background: #151515;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  font-size: 12px;
+.top{
+  background:#151515;
+  color:white;
+  text-align:center;
+  padding:10px;
+  font-size:12px;
 }
 
 /* هدر */
-.header {
-  border-bottom: 1px solid #eee;
-  background: #fff;
+.header{
+  background:white;
+  border-bottom:1px solid #eee;
 }
 
-.nav {
-  max-width: 1180px;
-  margin: auto;
-  height: 76px;
-  padding: 0 18px;
-  display: flex;
-  align-items: center;
-  gap: 28px;
+.nav{
+  max-width:1180px;
+  margin:auto;
+  min-height:76px;
+  padding:12px 18px;
+  display:flex;
+  align-items:center;
+  gap:28px;
 }
 
-.logo {
-  font-size: 21px;
-  font-weight: bold;
-  white-space: nowrap;
+.logo{
+  font-size:21px;
+  font-weight:bold;
+  white-space:nowrap;
 }
 
-.logo small {
-  display: block;
-  color: #999;
-  font-size: 10px;
-  margin-top: 5px;
-  font-weight: normal;
+.logo small{
+  display:block;
+  color:#999;
+  font-size:10px;
+  margin-top:5px;
+  font-weight:normal;
 }
 
-nav {
-  display: flex;
-  gap: 23px;
-  font-size: 13px;
-  color: #555;
+nav{
+  display:flex;
+  gap:22px;
+  font-size:13px;
+  color:#555;
 }
 
-nav a {
-  text-decoration: none;
-  color: inherit;
+nav a{
+  text-decoration:none;
+  color:inherit;
 }
 
-.search {
-  margin-right: auto;
-  width: 270px;
-  height: 42px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 0 14px;
-  font-family: inherit;
+nav a:hover{
+  color:#000;
+}
+
+.search{
+  margin-right:auto;
+  width:270px;
+  height:42px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  padding:0 14px;
+  font-family:inherit;
+  outline:none;
+}
+
+.search:focus{
+  border-color:#aaa;
 }
 
 /* بنر */
-.hero {
-  max-width: 1180px;
-  margin: 24px auto;
-  padding: 0 18px;
+.hero{
+  max-width:1180px;
+  margin:24px auto;
+  padding:0 18px;
 }
 
-.banner {
-  background: #f3f1ec;
-  border-radius: 18px;
-  min-height: 270px;
-  padding: 45px;
-  display: flex;
-  align-items: center;
-  justify
+.banner{
+  background:#f3f1ec;
+  border-radius:18px;
+  min-height:270px;
+  padding:45px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  overflow:hidden;
+}
+
+.banner-text{
+  max-width:600px;
+}
+
+.banner h1{
+  margin:0 0 15px;
+  font-size:32px;
+}
+
+.banner p{
+  color:#666;
+  line-height:2;
+  font-size:14px;
+}
+
+.banner-button{
+  display:inline-block;
+  background:#151515;
+  color:white;
+  padding:12px 24px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:13px;
+  margin-top:10px;
+}
+
+.banner-icon{
+  font-size:110px;
+  opacity:.15;
+}
+
+/* عنوان بخش */
+.section{
+  max-width:1180px;
+  margin:45px auto;
+  padding:0 18px;
+}
+
+.section-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:20px;
+}
+
+.section-title h2{
+  margin:0;
+  font-size:21px;
+}
+
+.section-title span{
+  color:#999;
+  font-size:12px;
+}
+
+/* کارت‌ها */
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.card{
+  border:1px solid #eee;
+  border-radius:14px;
+  overflow:hidden;
+  background:white;
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.card-image{
+  height:170px;
+  background:#f5f5f5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:65px;
+}
+
+.card-body{
+  padding:17px;
+}
+
+.card-body h3{
+  margin:0 0 10px;
+  font-size:15px;
+}
+
+.card-body p{
+  margin:0;
+  color:#888;
+  font-size:12px;
+  line-height:1.8;
+}
+
+.price{
+  margin-top:15px;
+  font-weight:bold;
+  font-size:14px;
+}
+
+/* دسته‌بندی */
+.categories{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.category{
+  background:#f7f7f7;
+  border-radius:14px;
+  padding:25px 15px;
+  text-align:center;
+  text-decoration:none;
+  color:#222;
+}
+
+.category-icon{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.category h3{
+  margin:0;
+  font-size:14px;
+}
+
+.category p{
+  color:#999;
+  font-size:11px;
+}
+
+/* امکانات */
+.features{
+  background:#151515;
+  color:white;
+  border-radius:18px;
+  padding:30px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.feature{
+  text-align:center;
+}
+
+.feature-icon{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.feature h3{
+  font-size:14px;
+  margin:5px 0 10px;
+}
+
+.feature p{
+  color:#aaa;
+  font-size:11px;
+  line-height:1.8;
+  margin:0;
+}
+
+/* درباره */
+.about{
+  background:#f7f7f7;
+  border-radius:18px;
+  padding:30px;
+  line-height:2;
+  font-size:13px;
+  color:#555;
+}
+
+/* فوتر */
+footer{
+  margin-top:50px;
+  background:#111;
+  color:white;
+  padding:40px 20px;
+}
+
+.footer-inner{
+  max-width:1180px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:30px;
+}
+
+footer h3{
+  margin-top:0;
+  font-size:16px;
+}
+
+footer p,
+footer a{
+  color:#aaa;
+  font-size:12px;
+  line-height:2;
+  text-decoration:none;
+}
+
+.copyright{
+  max-width:1180px;
+  margin:30px auto 0;
+  padding-top:20px;
+  border-top:1px solid #333;
+  color:#777;
+  font-size:11px;
+  text-align:center;
+}
+
+/* موبایل */
+@media(max-width:800px){
+
+  .nav{
+    flex-wrap:wrap;
+    height:auto;
+    padding:18px;
+  }
+
+  nav{
+    order:3;
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  .search{
+    width:180px;
+  }
+
+  .banner{
+    padding:30px;
+  }
+
+  .banner h1{
+    font-size:24px;
+  }
+
+  .banner-icon{
+    font-size:70px;
+  }
+
+  .products{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .categories{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  .footer-inner{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:480px){
+
+  .logo{
+    font-size:17px;
+  }
+
+  .search{
+    width:100%;
+    margin-top:10px;
+  }
+
+  .banner{
+    min-height:230px;
+    padding:25px;
+  }
+
+  .banner-icon{
+    display:none;
+  }
+
+  .products{
+    grid-template-columns:1fr;
+  }
+
+  .categories{
+    grid-template-columns:1fr 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- نوار بالایی -->
+<div class="top">
+  به سایت ابوالفضل رحیمی نسب خوش آمدید
+</div>
+
+<!-- هدر -->
+<header class="header">
+  <div class="nav">
+
+    <div class="logo">
+      ابوالفضل رحیمی نسب
+      <small>فروشگاه اینترنتی</small>
+    </div>
+
+    <nav>
+      <a href="#home">خانه</a>
+      <a href="#products">محصولات</a>
+      <a href="#categories">دسته‌بندی‌ها</a>
+      <a href="#about">درباره ما</a>
+      <a href="#contact">تماس با ما</a>
+    </nav>
+
+    <input
+      class="search"
+      type="text"
+      placeholder="جستجوی محصول..."
+      onkeyup="searchProducts(this.value)"
+    >
+
+  </div>
+</header>
+
+<!-- بنر -->
+<section class="hero" id="home">
+
+  <div class="banner">
+
+    <div class="banner-text">
+
+      <h1>
+        فروشگاه ابوالفضل رحیمی نسب
+      </h1>
+
+      <p>
+        به فروشگاه ما خوش آمدید.
+        محصولات و خدمات مورد نیاز خود را
+        در محیطی ساده و زیبا مشاهده کنید.
+      </p>
+
+      <a href="#products" class="banner-button">
+        مشاهده محصولات
+      </a>
+
+    </div>
+
+    <div class="banner-icon">
+      🛍️
+    </div>
+
+  </div>
+
+</section>
+
+<!-- دسته بندی -->
+<section class="section" id="categories">
+
+  <div class="section-title">
+    <h2>دسته‌بندی‌ها</h2>
+    <span>دسته‌بندی محصولات</span>
+  </div>
+
+  <div class="categories">
+
+    <a href="#products" class="category">
+      <div class="category-icon">📱</div>
+      <h3>موبایل</h3>
+      <p>گوشی و لوازم جانبی</p>
+    </a>
+
+    <a href="#products" class="category">
+      <div class="category-icon">💻</div>
+      <h3>لپ‌تاپ</h3>
+      <p>لپ‌تاپ و تجهیزات</p>
+    </a>
+
+    <a href="#products" class="category">
+      <div class="category-icon">🎧</div>
+      <h3>لوازم دیجیتال</h3>
+      <p>محصولات دیجیتال</p>
+    </a>
+
+    <a href="#products" class="category">
+      <div class="category-icon">🎁</div>
+      <h3>سایر محصولات</h3>
+      <p>محصولات متنوع</p>
+    </a>
+
+  </div>
+
+</section>
+
+<!-- محصولات -->
+<section class="section" id="products">
+
+  <div class="section-title">
+    <h2>محصولات منتخب</h2>
+    <span>محصولات فروشگاه</span>
+  </div>
+
+  <div class="products" id="productList">
+
+    <div class="card product">
+
+      <div class="card-image">
+        📱
+      </div>
+
+      <div class="card-body">
+        <h3>گوشی موبایل</h3>
+
+        <p>
+          گوشی موبایل با کیفیت مناسب
+        </p>
+
+        <div class="price">
+          تماس بگیرید
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card product">
+
+      <div class="card-image">
+        💻
+      </div>
+
+      <div class="card-body">
+        <h3>لپ‌تاپ</h3>
+
+        <p>
+          انواع لپ‌تاپ و کامپیوتر
+        </p>
+
+        <div class="price">
+          تماس بگیرید
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card product">
+
+      <div class="card-image">
+        🎧
+      </div>
+
+      <div class="card-body">
+        <h3>هدفون</h3>
+
+        <p>
+          هدفون و لوازم صوتی
+        </p>
+
+        <div class="price">
+          تماس بگیرید
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card product">
+
+      <div class="card-image">
+        ⌚
+      </div>
+
+      <div class="card-body">
+        <h3>ساعت هوشمند</h3>
+
+        <p>
+          ساعت و لوازم هوشمند
+        </p>
+
+        <div class="price">
+          تماس بگیرید
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- امکانات -->
+<section class="section">
+
+  <div class="features">
+
+    <div class="feature">
+      <div class="feature-icon">🚚</div>
+      <h3>ارسال سریع</h3>
+      <p>
+        ارسال سفارش‌ها در سریع‌ترین زمان ممکن
+      </p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">🔒</div>
+      <h3>خرید مطمئن</h3>
+      <p>
+        تلاش برای ارائه خدمات مطمئن به مشتریان
+      </p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">☎️</div>
+      <h3>پشتیبانی</h3>
+      <p>
+        پاسخگویی و پشتیبانی از مشتریان
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- درباره ما -->
+<section class="section" id="about">
+
+  <div class="section-title">
+    <h2>درباره ما</h2>
+  </div>
+
+  <div class="about">
+
+    <strong>ابوالفضل رحیمی نسب</strong>
+
+    <br>
+
+    این وب‌سایت برای معرفی محصولات و خدمات
+    و ایجاد یک فروشگاه اینترنتی ساده و کاربردی
+    طراحی شده است.
+
+  </div>
+
+</section>
+
+<!-- فوتر -->
+<footer id="contact">
+
+  <div class="footer-inner">
+
+    <div>
+      <h3>ابوالفضل رحیمی نسب</h3>
+
+      <p>
+        فروشگاه اینترنتی ابوالفضل رحیمی نسب
+      </p>
+
+      <p>
+        برای اطلاعات بیشتر با ما در ارتباط باشید.
+      </p>
+    </div>
+
+    <div>
+      <h3>دسترسی سریع</h3>
+
+      <p>
+        <a href="#home">خانه</a>
+      </p>
+
+      <p>
+        <a href="#products">محصولات</a>
+      </p>
+
+      <p>
+        <a href="#about">درباره ما</a>
+      </p>
+    </div>
+
+    <div>
+      <h3>ارتباط با ما</h3>
+
+      <p>
+        📞 تلفن: در حال تکمیل
+      </p>
+
+      <p>
+        📧 ایمیل: در حال تکمیل
+      </p>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © ۱۴۰۵ ابوالفضل رحیمی نسب - تمامی حقوق محفوظ است
+  </div>
+
+</footer>
+
+<script>
+
+function searchProducts(value){
+
+  value = value.trim().toLowerCase();
+
+  const products =
+    document.querySelectorAll(".product");
+
+  products.forEach(function(product){
+
+    const text =
+      product.innerText.toLowerCase();
+
+    if(text.includes(value)){
+      product.style.display = "";
+    }else{
+      product.style.display = "none";
+    }
+
+  });
+
+}
+
+</script>
+
+</body>
+</html>
