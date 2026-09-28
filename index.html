@@ -1,5 +1,1181 @@
-<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ابوالفضل رحیمی نسب | فروشگاه عطر</title><style>*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial;background:#fff;color:#171717}.top{background:#111;color:#fff;text-align:center;padding:9px;font-size:13px}.header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:5}.head{max-width:1200px;margin:auto;padding:15px;display:flex;gap:14px;align-items:center}.logo{font-weight:900;white-space:nowrap}.search{flex:1}.search input{width:100%;padding:12px 18px;border:1px solid #ddd;border-radius:25px}.cart,.buy{background:#111;color:#fff;border:0;border-radius:8px;padding:11px 15px;cursor:pointer}.cart{border-radius:24px}.nav{max-width:1200px;margin:auto;padding:0 15px 14px;display:flex;gap:25px;overflow:auto;white-space:nowrap}.hero{background:linear-gradient(120deg,#151515,#42382b);color:#fff;padding:60px 15px}.hero-in,.wrap{max-width:1200px;margin:auto}.hero h1{font-size:36px}.btn{display:inline-block;background:#c9a45c;color:#111;padding:12px 20px;border-radius:8px;font-weight:bold}.cats,.grid,.services{display:grid;gap:16px}.cats{grid-template-columns:repeat(3,1fr);margin:35px 0}.cat{background:#f5f2ed;padding:28px;text-align:center;border-radius:14px;font-size:20px;font-weight:bold;cursor:pointer}.cat small{display:block;color:#777;font-size:12px;margin-top:8px}.title{display:flex;justify-content:space-between;align-items:center}.grid{grid-template-columns:repeat(4,1fr)}.product{border:1px solid #eee;border-radius:14px;overflow:hidden}.pic{height:210px;background:#f7f7f7;display:flex;align-items:center;justify-content:center;font-size:75px}.info{padding:14px}.name{font-weight:bold;line-height:1.8;min-height:50px}.en{font-size:11px;color:#888;direction:ltr;text-align:left;min-height:18px}.price{font-weight:900;color:#8a6b32;margin:10px 0}.buy{width:100%}.services{grid-template-columns:repeat(3,1fr);margin:45px 0}.service{text-align:center;background:#fafafa;padding:25px;border-radius:14px}.service b{display:block;margin:8px}footer{background:#151515;color:#ddd;padding:35px;text-align:center}.modal{display:none;position:fixed;inset:0;background:#0008;z-index:20;padding:20px}.box{background:#fff;max-width:650px;width:100%;margin:auto;padding:22px;border-radius:16px;max-height:90vh;overflow:auto}.close{float:left;border:0;background:none;font-size:25px}.row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #eee}.form input,.form textarea{width:100%;padding:12px;margin:7px 0;border:1px solid #ddd;border-radius:8px;font-family:inherit}.form textarea{min-height:90px}.empty{text-align:center;padding:30px;color:#777}@media(max-width:800px){.head{flex-wrap:wrap}.logo{width:100%}.search{order:3;width:100%}.cats,.services{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:28px}}@media(max-width:430px){.pic{height:170px;font-size:60px}.info{padding:10px}.name{font-size:13px}}</style></head><body>
-<div class="top">برای اطلاع از فروش ویژه و محصولات جدید، با ما همراه باشید</div><header class="header"><div class="head"><div class="logo">ابوالفضل رحیمی نسب</div><div class="search"><input id="search" placeholder="جستجوی عطر و ادکلن..."></div><button class="cart" onclick="openCart()">🛒 سبد خرید (<span id="count">0</span>)</button></div><nav class="nav"><a href="#home">خانه</a><a href="#products">پرفروش‌ترین‌ها</a><a href="#products" onclick="filter('زنانه')">زنانه</a><a href="#products" onclick="filter('مردانه')">مردانه</a><a href="#products" onclick="filter('اسپرت')">اسپرت</a></nav></header>
-<section class="hero" id="home"><div class="hero-in"><h1>فروشگاه عطر و ادکلن</h1><p>عطرهای مردانه، زنانه و اسپرت با تجربه خرید ساده و سریع.</p><a class="btn" href="#products">مشاهده محصولات</a></div></section><main class="wrap"><div class="cats"><div class="cat" onclick="filter('زنانه')">🌸 عطرهای زنانه<small>مشاهده محصولات زنانه</small></div><div class="cat" onclick="filter('مردانه')">🖤 عطرهای مردانه<small>مشاهده محصولات مردانه</small></div><div class="cat" onclick="filter('اسپرت')">✨ عطرهای اسپرت<small>مشاهده محصولات اسپرت</small></div></div><div class="title" id="products"><h2>پرفروش‌ترین‌ها</h2><button class="btn" onclick="filter('همه')">مشاهده همه</button></div><div class="grid" id="grid"></div><div class="services"><div class="service">🚚<b>ارسال رایگان</b>برای سفارش‌های واجد شرایط</div><div class="service">☎️<b>پشتیبانی ۲۴ ساعته</b>پاسخ‌گویی به مشتریان</div><div class="service">✓<b>تضمین کیفیت کالا</b>خرید مطمئن و آسان</div></div></main><footer>© ابوالفضل رحیمی نسب — فروشگاه عطر و ادکلن</footer>
-<div class="modal" id="cartModal" onclick="if(event.target===this)closeCart()"><div class="box"><button class="close" onclick="closeCart()">×</button><h2>سبد خرید</h2><div id="cartItems"></div><div id="checkout" class="form" style="display:none"><h3>اطلاعات سفارش</h3><input id="name" placeholder="نام و نام خانوادگی"><input id="phone" placeholder="شماره موبایل"><textarea id="address" placeholder="آدرس کامل"></textarea><button class="buy" onclick="submitOrder()">ثبت سفارش</button></div></div></div>
-<script>const products=[['کرید اونتوس مردانه','Creed Aventus For Him',6400000,'مردانه','🖤'],['بولگاری اومنیا کریستال','Bvlgari Omnia Crystalline',7000000,'زنانه','🌸'],['لاگوست اسنشیال','Lacoste Essential',6000000,'مردانه','💚'],['تام فورد فاکینگ فابولوس','Tom Ford Fucking Fabulous',6200000,'اسپرت','🖤'],['لویی ویتون ایمجینیشن','Louis Vuitton Imagination',6200000,'مردانه','✨'],['پارفومز د مارلی آلتیر','Parfums de Marly Althair',6200000,'مردانه','🤎'],['تام فورد بلک ارکید','Tom Ford Black Orchid',6000000,'زنانه','🌹'],['باربری لندن زنانه','Burberry London For Women',6000000,'زنانه','🌷'],['سوسپیرو اکسنتو','Sospiro Accento',6400000,'اسپرت','💜'],['دیور ساواج','Dior Sauvage',6000000,'مردانه','🔵'],['گوچی بلوم','Gucci Bloom',6000000,'زنانه','🌺'],['پارفومز د مارلی هالتان','Parfums de Marly Haltane',6200000,'مردانه','🟢'],['هرمس تق د هرمس','Hermes Terre d’Hermes',6000000,'مردانه','🟠'],['لطافه یارا','Lattafa Yara',6300000,'زنانه','💗'],['شنل چنس او تندر','Chanel Chance Eau Tendre',6000000,'زنانه','🌸'],['پاکو رابان اینوکتوس','Paco Rabanne Invictus',6000000,'مردانه','⚡'],['شنل بلو د شنل','Chanel Bleu de Chanel',6000000,'مردانه','🔷'],['تام فورد امبر لدر','Tom Ford Ombre Leather',6200000,'مردانه','🤎'],['ورساچه پور هوم عود نویر','Versace Pour Homme Oud Noir',7400000,'مردانه','🖤'],['ناسوماتو بلک افغان','Nasomatto Black Afgano',6000000,'اسپرت','⚫']];let cart=JSON.parse(localStorage.getItem('myPerfumeCart')||'[]'),current='همه';const money=n=>n.toLocaleString('fa-IR')+' تومان';function render(list=products){grid.innerHTML=list.map((p,i)=>`<article class="product"><div class="pic">${p[4]}</div><div class="info"><div class="name">${p[0]}</div><div class="en">${p[1]}</div><div class="price">${money(p[2])}</div><button class="buy" onclick="add(${products.indexOf(p)})">افزودن به سبد</button></div></article>`).join('')}function filter(c){current=c;render(c==='همه'?products:products.filter(p=>p[3]===c))}function add(i){let x=cart.find(a=>a.i===i);x?x.q++:cart.push({i,q:1});save();openCart()}function save(){localStorage.setItem('myPerfumeCart',JSON.stringify(cart));count.textContent=cart.reduce((s,x)=>s+x.q,0)}function openCart(){renderCart();cartModal.style.display='flex'}function closeCart(){cartModal.style.display='none'}function renderCart(){if(!cart.length){cartItems.innerHTML='<div class="empty">سبد خرید خالی است.</div>';checkout.style.display='none';return}let total=0;cartItems.innerHTML=cart.map(x=>{let p=products[x.i],s=p[2]*x.q;total+=s;return `<div class="row"><span>${p[4]} ${p[0]}<br>${money(p[2])}</span><span><button onclick="chg(${x.i},-1)">−</button> ${x.q} <button onclick="chg(${x.i},1)">+</button><br>${money(s)}</span></div>`}).join('')+`<h3>جمع کل: ${money(total)}</h3><button class="buy" onclick="checkout.style.display='block'">ادامه و ثبت سفارش</button>`;checkout.style.display='none'}function chg(i,d){let x=cart.find(a=>a.i===i);x.q+=d;if(x.q<1)cart=cart.filter(a=>a.i!==i);save();renderCart()}function submitOrder(){let n=name.value.trim(),p=phone.value.trim(),a=address.value.trim();if(!n||!/^09\d{9}$/.test(p)||!a)return alert('نام، موبایل معتبر و آدرس را کامل وارد کنید.');alert('اطلاعات سفارش آماده است؛ درگاه پرداخت هنوز متصل نشده است.')}search.oninput=e=>{let q=e.target.value.toLowerCase();render((current==='همه'?products:products.filter(p=>p[3]===current)).filter(p=>(p[0]+' '+p[1]).toLowerCase().includes(q)))};render();save();</script></body></html>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ابوالفضل رحیمی نسب | فروشگاه عطر</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:tahoma,Arial,sans-serif;
+  background:#fff;
+  color:#222;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1200px,94%);
+  margin:auto;
+}
+
+/* نوار بالا */
+.top-bar{
+  background:#171717;
+  color:#fff;
+  text-align:center;
+  padding:9px;
+  font-size:13px;
+}
+
+/* هدر */
+header{
+  background:#fff;
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.header-main{
+  min-height:75px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.logo{
+  font-size:21px;
+  font-weight:bold;
+  white-space:nowrap;
+}
+
+.search{
+  flex:1;
+}
+
+.search input{
+  width:100%;
+  border:1px solid #ddd;
+  border-radius:30px;
+  padding:14px 20px;
+  outline:none;
+  font-size:14px;
+}
+
+.cart-btn{
+  background:#111;
+  color:white;
+  border:0;
+  border-radius:25px;
+  padding:12px 18px;
+  cursor:pointer;
+}
+
+nav{
+  border-top:1px solid #f3f3f3;
+}
+
+.nav-menu{
+  display:flex;
+  gap:30px;
+  padding:14px 0;
+  font-size:14px;
+}
+
+.nav-menu a:hover{
+  color:#9b7635;
+}
+
+/* بنر */
+.hero{
+  background:
+  linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.25)),
+  linear-gradient(135deg,#171717,#493d2b);
+  color:white;
+  padding:85px 0;
+}
+
+.hero-content{
+  max-width:650px;
+}
+
+.hero h1{
+  font-size:40px;
+  margin-bottom:18px;
+}
+
+.hero p{
+  line-height:2.2;
+  color:#ddd;
+  margin-bottom:25px;
+}
+
+.hero-btn{
+  display:inline-block;
+  background:#c6a05b;
+  color:#111;
+  padding:13px 28px;
+  border-radius:7px;
+  font-weight:bold;
+}
+
+/* عنوان */
+.section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:45px 0 20px;
+}
+
+.section-title h2{
+  font-size:25px;
+}
+
+.section-title button{
+  background:white;
+  border:1px solid #222;
+  padding:9px 18px;
+  border-radius:7px;
+  cursor:pointer;
+}
+
+/* دسته بندی */
+.categories{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:35px;
+}
+
+.category{
+  min-height:160px;
+  border-radius:15px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  background:#f5f2ed;
+  transition:.2s;
+}
+
+.category:hover{
+  transform:translateY(-4px);
+}
+
+.category .icon{
+  font-size:45px;
+  margin-bottom:12px;
+}
+
+.category strong{
+  font-size:20px;
+}
+
+.category span{
+  margin-top:8px;
+  color:#777;
+  font-size:12px;
+}
+
+/* محصولات */
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.product{
+  border:1px solid #eee;
+  border-radius:14px;
+  overflow:hidden;
+  background:#fff;
+  transition:.25s;
+}
+
+.product:hover{
+  transform:translateY(-5px);
+  box-shadow:0 12px 30px rgba(0,0,0,.09);
+}
+
+.product-image{
+  height:230px;
+  background:#f7f7f7;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:85px;
+}
+
+.product-info{
+  padding:15px;
+}
+
+.product-name{
+  font-weight:bold;
+  line-height:1.8;
+  min-height:52px;
+}
+
+.product-brand{
+  direction:ltr;
+  text-align:left;
+  color:#888;
+  font-size:11px;
+  min-height:20px;
+}
+
+.price{
+  color:#8b6b32;
+  font-weight:bold;
+  margin:12px 0;
+}
+
+.add-cart{
+  width:100%;
+  background:#111;
+  color:#fff;
+  border:0;
+  border-radius:8px;
+  padding:11px;
+  cursor:pointer;
+}
+
+.add-cart:hover{
+  background:#333;
+}
+
+/* خدمات */
+.services{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin:55px 0;
+}
+
+.service{
+  text-align:center;
+  background:#fafafa;
+  border-radius:15px;
+  padding:28px;
+}
+
+.service-icon{
+  font-size:35px;
+  margin-bottom:10px;
+}
+
+.service strong{
+  display:block;
+  margin-bottom:8px;
+}
+
+/* فوتر */
+footer{
+  background:#151515;
+  color:#fff;
+  margin-top:50px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:40px;
+  padding:45px 0;
+}
+
+footer h3{
+  margin-bottom:15px;
+}
+
+footer p,
+footer a{
+  color:#bbb;
+  font-size:13px;
+  line-height:2.2;
+}
+
+.copyright{
+  text-align:center;
+  border-top:1px solid #333;
+  padding:15px;
+  color:#999;
+  font-size:12px;
+}
+
+/* مودال سبد */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  z-index:500;
+  padding:20px;
+}
+
+.modal-box{
+  background:white;
+  width:min(650px,100%);
+  max-height:90vh;
+  overflow:auto;
+  margin:auto;
+  padding:25px;
+  border-radius:15px;
+}
+
+.close{
+  float:left;
+  background:none;
+  border:0;
+  font-size:28px;
+  cursor:pointer;
+}
+
+.cart-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  border-bottom:1px solid #eee;
+  padding:15px 0;
+}
+
+.quantity button{
+  border:1px solid #ddd;
+  background:white;
+  padding:5px 10px;
+  cursor:pointer;
+}
+
+.checkout{
+  margin-top:20px;
+}
+
+.checkout input,
+.checkout textarea{
+  width:100%;
+  border:1px solid #ddd;
+  border-radius:8px;
+  padding:12px;
+  margin-bottom:10px;
+  font-family:inherit;
+}
+
+.checkout textarea{
+  min-height:90px;
+}
+
+/* موبایل */
+@media(max-width:800px){
+
+  .header-main{
+    flex-wrap:wrap;
+    padding:12px 0;
+  }
+
+  .logo{
+    width:100%;
+  }
+
+  .search{
+    width:100%;
+    order:3;
+  }
+
+  .nav-menu{
+    overflow-x:auto;
+    white-space:nowrap;
+    gap:22px;
+  }
+
+  .hero{
+    padding:55px 0;
+  }
+
+  .hero h1{
+    font-size:29px;
+  }
+
+  .categories{
+    grid-template-columns:1fr;
+  }
+
+  .products{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+  .product-image{
+    height:170px;
+    font-size:60px;
+  }
+
+  .product-info{
+    padding:10px;
+  }
+
+  .product-name{
+    font-size:13px;
+  }
+
+  .price{
+    font-size:13px;
+  }
+
+  .services{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+ارسال رایگان | پشتیبانی | تضمین کیفیت کالا
+</div>
+
+<header>
+
+<div class="container header-main">
+
+<div class="logo">
+ابوالفضل رحیمی نسب
+</div>
+
+<div class="search">
+<input
+id="search"
+type="text"
+placeholder="جستجوی عطر و ادکلن..."
+>
+</div>
+
+<button class="cart-btn" onclick="openCart()">
+🛒 سبد خرید
+(<span id="cartCount">0</span>)
+</button>
+
+</div>
+
+<nav>
+<div class="container nav-menu">
+<a href="#home">خانه</a>
+<a href="#products">پرفروش‌ترین‌ها</a>
+<a href="#women">زنانه</a>
+<a href="#men">مردانه</a>
+<a href="#sport">اسپرت</a>
+</div>
+</nav>
+
+</header>
+
+
+<section class="hero" id="home">
+
+<div class="container hero-content">
+
+<h1>
+فروشگاه عطر و ادکلن
+</h1>
+
+<p>
+مجموعه‌ای از عطرهای محبوب و پرطرفدار مردانه، زنانه و اسپرت را با تجربه‌ای ساده و سریع تهیه کنید.
+</p>
+
+<a class="hero-btn" href="#products">
+مشاهده محصولات
+</a>
+
+</div>
+
+</section>
+
+
+<main class="container">
+
+
+<section class="categories">
+
+<div class="category" onclick="showCategory('زنانه')">
+<div class="icon">🌸</div>
+<strong>عطرهای زنانه</strong>
+<span>مشاهده محصولات زنانه</span>
+</div>
+
+<div class="category" onclick="showCategory('مردانه')">
+<div class="icon">🖤</div>
+<strong>عطرهای مردانه</strong>
+<span>مشاهده محصولات مردانه</span>
+</div>
+
+<div class="category" onclick="showCategory('اسپرت')">
+<div class="icon">✨</div>
+<strong>عطرهای اسپرت</strong>
+<span>مشاهده محصولات اسپرت</span>
+</div>
+
+</section>
+
+
+<div class="section-title" id="products">
+
+<h2>
+پرفروش‌ترین محصولات
+</h2>
+
+<button onclick="showCategory('همه')">
+مشاهده همه
+</button>
+
+</div>
+
+
+<div class="products" id="productList">
+</div>
+
+
+<section class="services">
+
+<div class="service">
+<div class="service-icon">🚚</div>
+<strong>ارسال رایگان</strong>
+<p>ارسال سفارش‌های واجد شرایط</p>
+</div>
+
+<div class="service">
+<div class="service-icon">☎️</div>
+<strong>پشتیبانی</strong>
+<p>پاسخ‌گویی به مشتریان</p>
+</div>
+
+<div class="service">
+<div class="service-icon">✓</div>
+<strong>تضمین کیفیت کالا</strong>
+<p>خرید مطمئن و آسان</p>
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="container footer-grid">
+
+<div>
+<h3>ابوالفضل رحیمی نسب</h3>
+<p>
+فروشگاه آنلاین عطر و ادکلن با طراحی اختصاصی و تجربه خرید آسان.
+</p>
+</div>
+
+<div>
+<h3>دسترسی سریع</h3>
+<a href="#home">خانه</a><br>
+<a href="#products">محصولات</a><br>
+<a href="#" onclick="openCart()">سبد خرید</a>
+</div>
+
+<div>
+<h3>ارتباط با ما</h3>
+<p>ایمیل: info@example.com</p>
+<p>پشتیبانی فروشگاه</p>
+</div>
+
+</div>
+
+<div class="copyright">
+© تمامی حقوق این فروشگاه محفوظ است.
+</div>
+
+</footer>
+
+
+<div class="modal" id="cartModal">
+
+<div class="modal-box">
+
+<button class="close" onclick="closeCart()">×</button>
+
+<h2>
+سبد خرید
+</h2>
+
+<div id="cartItems"></div>
+
+<div id="checkout" class="checkout" style="display:none">
+
+<h3>اطلاعات سفارش</h3>
+
+<input
+id="customerName"
+placeholder="نام و نام خانوادگی"
+>
+
+<input
+id="customerPhone"
+placeholder="شماره موبایل"
+>
+
+<textarea
+id="customerAddress"
+placeholder="آدرس کامل"
+></textarea>
+
+<button class="add-cart" onclick="submitOrder()">
+ثبت سفارش
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+const products=[
+
+{
+name:"کرید اونتوس",
+brand:"Creed Aventus",
+price:6400000,
+category:"مردانه",
+icon:"🖤"
+},
+
+{
+name:"بولگاری اومنیا کریستال",
+brand:"Bvlgari Omnia Crystalline",
+price:7000000,
+category:"زنانه",
+icon:"🌸"
+},
+
+{
+name:"لاگوست اسنشیال",
+brand:"Lacoste Essential",
+price:6000000,
+category:"مردانه",
+icon:"💚"
+},
+
+{
+name:"تام فورد فاکینگ فابولوس",
+brand:"Tom Ford Fucking Fabulous",
+price:6200000,
+category:"اسپرت",
+icon:"🖤"
+},
+
+{
+name:"لویی ویتون ایمجینیشن",
+brand:"Louis Vuitton Imagination",
+price:6200000,
+category:"مردانه",
+icon:"✨"
+},
+
+{
+name:"پارفومز د مارلی آلتیر",
+brand:"Parfums de Marly Althair",
+price:6200000,
+category:"مردانه",
+icon:"🤎"
+},
+
+{
+name:"تام فورد بلک ارکید",
+brand:"Tom Ford Black Orchid",
+price:6000000,
+category:"زنانه",
+icon:"🌹"
+},
+
+{
+name:"باربری لندن زنانه",
+brand:"Burberry London",
+price:6000000,
+category:"زنانه",
+icon:"🌷"
+},
+
+{
+name:"سوسپیرو اکسنتو",
+brand:"Sospiro Accento",
+price:6400000,
+category:"اسپرت",
+icon:"💜"
+},
+
+{
+name:"دیور ساواج",
+brand:"Dior Sauvage",
+price:6000000,
+category:"مردانه",
+icon:"🔵"
+},
+
+{
+name:"گوچی بلوم",
+brand:"Gucci Bloom",
+price:6000000,
+category:"زنانه",
+icon:"🌺"
+},
+
+{
+name:"پارفومز د مارلی هالتان",
+brand:"Parfums de Marly Haltane",
+price:6200000,
+category:"مردانه",
+icon:"🟢"
+},
+
+{
+name:"هرمس تق د هرمس",
+brand:"Hermes Terre d’Hermes",
+price:6000000,
+category:"مردانه",
+icon:"🟠"
+},
+
+{
+name:"لطافه یارا",
+brand:"Lattafa Yara",
+price:6300000,
+category:"زنانه",
+icon:"💗"
+},
+
+{
+name:"شیسیدو زن",
+brand:"Shiseido Zen",
+price:6000000,
+category:"زنانه",
+icon:"🌸"
+},
+
+{
+name:"پارفومز د مارلی لیتون",
+brand:"Parfums de Marly Layton",
+price:6000000,
+category:"مردانه",
+icon:"💎"
+},
+
+{
+name:"ویکتوریا سکرت بامبشل",
+brand:"Victoria’s Secret Bombshell",
+price:6000000,
+category:"زنانه",
+icon:"🌺"
+},
+
+{
+name:"کارولینا هررا 212 مردانه",
+brand:"Carolina Herrera 212 Men",
+price:6000000,
+category:"مردانه",
+icon:"🖤"
+},
+
+{
+name:"شنل چنس او تندر",
+brand:"Chanel Chance Eau Tendre",
+price:6000000,
+category:"زنانه",
+icon:"🌸"
+},
+
+{
+name:"بلو د شنل",
+brand:"Bleu de Chanel",
+price:6000000,
+category:"مردانه",
+icon:"🔷"
+}
+
+];
+
+let cart=[];
+let currentCategory="همه";
+
+function money(number){
+
+return number.toLocaleString("fa-IR")+" تومان";
+
+}
+
+
+function renderProducts(list=products){
+
+const box=document.getElementById("productList");
+
+box.innerHTML=list.map((product,index)=>`
+
+<div class="product">
+
+<div class="product-image">
+${product.icon}
+</div>
+
+<div class="product-info">
+
+<div class="product-name">
+${product.name}
+</div>
+
+<div class="product-brand">
+${product.brand}
+</div>
+
+<div class="price">
+${money(product.price)}
+</div>
+
+<button
+class="add-cart"
+onclick="addToCart(${index})"
+>
+افزودن به سبد
+</button>
+
+</div>
+
+</div>
+
+`).join("");
+
+}
+
+
+function showCategory(category){
+
+currentCategory=category;
+
+let list;
+
+if(category==="همه"){
+
+list=products;
+
+}else{
+
+list=products.filter(
+p=>p.category===category
+);
+
+}
+
+renderProducts(list);
+
+document
+.getElementById("products")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function addToCart(index){
+
+const product=products[index];
+
+const found=cart.find(
+item=>item.index===index
+);
+
+if(found){
+
+found.quantity++;
+
+}else{
+
+cart.push({
+index:index,
+quantity:1
+});
+
+}
+
+saveCart();
+
+openCart();
+
+}
+
+
+function saveCart(){
+
+localStorage.setItem(
+"perfumeCart",
+JSON.stringify(cart)
+);
+
+updateCartCount();
+
+}
+
+
+function updateCartCount(){
+
+let count=0;
+
+cart.forEach(
+item=>count+=item.quantity
+);
+
+document.getElementById(
+"cartCount"
+).textContent=count;
+
+}
+
+
+function openCart(){
+
+renderCart();
+
+document.getElementById(
+"cartModal"
+).style.display="flex";
+
+}
+
+
+function closeCart(){
+
+document.getElementById(
+"cartModal"
+).style.display="none";
+
+}
+
+
+function renderCart(){
+
+const box=document.getElementById(
+"cartItems"
+);
+
+if(cart.length===0){
+
+box.innerHTML=
+'<p style="padding:30px;text-align:center;color:#777">سبد خرید خالی است.</p>';
+
+document.getElementById(
+"checkout"
+).style.display="none";
+
+return;
+
+}
+
+let total=0;
+
+box.innerHTML=cart.map(item=>{
+
+const product=products[item.index];
+
+const sum=
+product.price*item.quantity;
+
+total+=sum;
+
+return `
+
+<div class="cart-item">
+
+<div>
+
+<strong>
+${product.name}
+</strong>
+
+<br>
+
+${money(product.price)}
+
+</div>
+
+<div class="quantity">
+
+<button
+onclick="changeQuantity(${item.index},-1)"
+>
+−
+</button>
+
+${item.quantity}
+
+<button
+onclick="changeQuantity(${item.index},1)"
+>
++
+</button>
+
+<br>
+
+<strong>
+${money(sum)}
+</strong>
+
+</div>
+
+</div>
+
+`;
+
+}).join("");
+
+box.innerHTML+=`
+
+<h3 style="margin:20px 0">
+
+جمع کل:
+${money(total)}
+
+</h3>
+
+<button
+class="add-cart"
+onclick="document.getElementById('checkout').style.display='block'"
+>
+ادامه سفارش
+</button>
+
+`;
+
+}
+
+
+function changeQuantity(index,change){
+
+const item=cart.find(
+x=>x.index===index
+);
+
+if(!item)return;
+
+item.quantity+=change;
+
+if(item.quantity<=0){
+
+cart=cart.filter(
+x=>x.index!==index
+);
+
+}
+
+saveCart();
+
+renderCart();
+
+}
+
+
+function submitOrder(){
+
+const name=
+document.getElementById("customerName")
+.value.trim();
+
+const phone=
+document.getElementById("customerPhone")
+.value.trim();
+
+const address=
+document.getElementById("customerAddress")
+.value.trim();
+
+if(!name || !/^09\d{9}$/.test(phone) || !address){
+
+alert(
+"لطفاً نام، شماره موبایل معتبر و آدرس را کامل وارد کنید."
+);
+
+return;
+
+}
+
+alert(
+"اطلاعات سفارش دریافت شد. مرحله بعد اتصال درگاه پرداخت واقعی است."
+);
+
+}
+
+
+document
+.getElementById("search")
+.addEventListener(
+"input",
+function(){
+
+const query=
+this.value.trim().toLowerCase();
+
+let list=
+currentCategory==="همه"
+?products
+:products.filter(
+p=>p.category===currentCategory
+);
+
+list=list.filter(
+p=>
+(p.name+" "+p.brand)
+.toLowerCase()
+.includes(query)
+);
+
+renderProducts(list);
+
+}
+);
+
+
+const saved=
+localStorage.getItem("perfumeCart");
+
+if(saved){
+
+try{
+
+cart=JSON.parse(saved);
+
+}catch(e){
+
+cart=[];
+
+}
+
+}
+
+renderProducts();
+
+updateCartCount();
+
+</script>
+
+</body>
+</html>
