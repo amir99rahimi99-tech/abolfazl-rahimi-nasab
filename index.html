@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>قیمت ارز | ابوالفضل رحیمی نسب</title>
+<title>ابوالفضل رحیمی نسب | فروشگاه</title>
 
 <style>
 * {
@@ -13,313 +13,84 @@
 
 body {
   margin: 0;
-  background: #0b1020;
-  color: #fff;
+  background: #fff;
+  color: #222;
   font-family: Tahoma, Arial, sans-serif;
 }
 
-header {
+/* نوار بالایی */
+.top {
+  background: #151515;
+  color: #fff;
   text-align: center;
-  padding: 35px 15px 25px;
+  padding: 10px;
+  font-size: 12px;
 }
 
-header h1 {
-  margin: 0 0 10px;
-  font-size: 28px;
+/* هدر */
+.header {
+  border-bottom: 1px solid #eee;
+  background: #fff;
 }
 
-header p {
-  color: #9ca8c7;
-  margin: 0;
-}
-
-.container {
-  width: calc(100% - 24px);
-  max-width: 1000px;
+.nav {
+  max-width: 1180px;
   margin: auto;
+  height: 76px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
 }
 
-.card {
-  background: #151d35;
-  border: 1px solid #283657;
+.logo {
+  font-size: 21px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.logo small {
+  display: block;
+  color: #999;
+  font-size: 10px;
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+nav {
+  display: flex;
+  gap: 23px;
+  font-size: 13px;
+  color: #555;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.search {
+  margin-right: auto;
+  width: 270px;
+  height: 42px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0 14px;
+  font-family: inherit;
+}
+
+/* بنر */
+.hero {
+  max-width: 1180px;
+  margin: 24px auto;
+  padding: 0 18px;
+}
+
+.banner {
+  background: #f3f1ec;
   border-radius: 18px;
-  overflow: hidden;
-  margin-bottom: 25px;
-}
-
-.card-title {
-  padding: 18px;
-  font-size: 20px;
-  font-weight: bold;
-  border-bottom: 1px solid #283657;
-}
-
-.update {
-  padding: 12px 18px;
-  color: #9ca8c7;
-  font-size: 13px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th {
-  background: #1c2745;
-  padding: 15px 10px;
-  color: #cbd5e1;
-}
-
-td {
-  padding: 15px 10px;
-  text-align: center;
-  border-bottom: 1px solid #283657;
-}
-
-tr:last-child td {
-  border-bottom: none;
-}
-
-.currency {
-  font-weight: bold;
-}
-
-.symbol {
-  color: #8fa0c4;
-  font-size: 13px;
-}
-
-.buy {
-  color: #36d399;
-  font-weight: bold;
-}
-
-.sell {
-  color: #ff7070;
-  font-weight: bold;
-}
-
-.notice {
-  padding: 15px;
-  font-size: 13px;
-  line-height: 2;
-  color: #aeb9d3;
-}
-
-footer {
-  text-align: center;
-  color: #7f8baa;
-  padding: 30px 10px;
-  font-size: 13px;
-}
-
-@media (max-width: 600px) {
-
-  header h1 {
-    font-size: 22px;
-  }
-
-  th, td {
-    padding: 12px 5px;
-    font-size: 13px;
-  }
-
-  .currency {
-    font-size: 13px;
-  }
-
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <h1>به سایت ابوالفضل رحیمی نسب خوش آمدید</h1>
-  <p>نرخ ارز و قیمت‌های صرافی</p>
-</header>
-
-<div class="container">
-
-  <div class="card">
-
-    <div class="card-title">
-      💱 نرخ ارز
-    </div>
-
-    <div class="update">
-      آخرین اطلاعات نمایش داده‌شده از نرخ‌های صرافی 
-    </div>
-
-    <table>
-
-      <thead>
-        <tr>
-          <th>ارز</th>
-          <th>نماد</th>
-          <th>خرید</th>
-          <th>فروش</th>
-        </tr>
-      </thead>
-
-      <tbody>
-
-        <tr>
-          <td class="currency">دلار آمریکا</td>
-          <td class="symbol">USD</td>
-          <td class="buy">۲٬۲۳۰٬۰۰۰</td>
-          <td class="sell">۲٬۲۶۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">یورو</td>
-          <td class="symbol">EUR</td>
-          <td class="buy">۲٬۵۷۰٬۰۰۰</td>
-          <td class="sell">۲٬۶۲۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">پوند انگلیس</td>
-          <td class="symbol">GBP</td>
-          <td class="buy">۲٬۹۰۰٬۰۰۰</td>
-          <td class="sell">۲٬۹۴۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">درهم امارات</td>
-          <td class="symbol">AED</td>
-          <td class="buy">۵۸۰٬۰۰۰</td>
-          <td class="sell">۶۰۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">لیر ترکیه</td>
-          <td class="symbol">TRY</td>
-          <td class="buy">۴۷٬۰۰۰</td>
-          <td class="sell">۵۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">یوان چین</td>
-          <td class="symbol">CNY</td>
-          <td class="buy">۲۰۰٬۰۰۰</td>
-          <td class="sell">۲۱۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">دلار استرالیا</td>
-          <td class="symbol">AUD</td>
-          <td class="buy">۱٬۵۵۰٬۰۰۰</td>
-          <td class="sell">۱٬۶۰۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">دلار کانادا</td>
-          <td class="symbol">CAD</td>
-          <td class="buy">۱٬۶۰۰٬۰۰۰</td>
-          <td class="sell">۱٬۶۶۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">فرانک سوئیس</td>
-          <td class="symbol">CHF</td>
-          <td class="buy">۲٬۶۰۰٬۰۰۰</td>
-          <td class="sell">۲٬۷۰۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">کرون سوئد</td>
-          <td class="symbol">SEK</td>
-          <td class="buy">۱۴۰٬۰۰۰</td>
-          <td class="sell">۱۵۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">کرون نروژ</td>
-          <td class="symbol">NOK</td>
-          <td class="buy">۱۳۷٬۰۰۰</td>
-          <td class="sell">۱۴۵٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td class="currency">ین ژاپن</td>
-          <td class="symbol">JPY</td>
-          <td class="buy">۱۱٬۸۰۰</td>
-          <td class="sell">۱۳٬۸۰۰</td>
-        </tr>
-
-      </tbody>
-
-    </table>
-
-    <div class="notice">
-      ⚠️ قیمت‌ها ممکن است تغییر کنند. برای معاملات واقعی،
-      نرخ لحظه‌ای صرافی را بررسی کنید.
-    </div>
-
-  </div>
-
-
-  <div class="card">
-
-    <div class="card-title">
-      🪙 طلا و سکه
-    </div>
-
-    <table>
-
-      <thead>
-        <tr>
-          <th>نوع</th>
-          <th>خرید</th>
-          <th>فروش</th>
-        </tr>
-      </thead>
-
-      <tbody>
-
-        <tr>
-          <td>سکه گرمی</td>
-          <td class="buy">۳۲۰٬۰۰۰٬۰۰۰</td>
-          <td class="sell">۳۳۵٬۰۰۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td>ربع سکه</td>
-          <td class="buy">۶۲۰٬۰۰۰٬۰۰۰</td>
-          <td class="sell">۶۵۰٬۰۰۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td>نیم سکه</td>
-          <td class="buy">۱٬۲۰۰٬۰۰۰٬۰۰۰</td>
-          <td class="sell">۱٬۲۳۰٬۰۰۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td>سکه بهار آزادی</td>
-          <td class="buy">۲٬۳۳۰٬۰۰۰٬۰۰۰</td>
-          <td class="sell">۲٬۳۰۰٬۰۰۰٬۰۰۰</td>
-        </tr>
-
-        <tr>
-          <td>سکه امامی</td>
-          <td class="buy">۲٬۳۵۰٬۰۰۰٬۰۰۰</td>
-          <td class="sell">۲٬۴۰۰٬۰۰۰٬۰۰۰</td>
-        </tr>
-
-      </tbody>
-
-    </table>
-
-  </div>
-
-</div>
-
-<footer>
-  © ابوالفضل رحیمی نسب
-</footer>
-
-</body>
-</html>
+  min-height: 270px;
+  padding: 45px;
+  display: flex;
+  align-items: center;
+  justify
