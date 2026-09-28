@@ -2,739 +2,403 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>ابوالفضل رحیمی نسب | فروشگاه عطر</title>
 
 <style>
-*{
-    box-sizing:border-box;
-}
-
+*{box-sizing:border-box}
 body{
-    margin:0;
-    font-family:Tahoma,Arial,sans-serif;
-    background:#fafafa;
-    color:#222;
+margin:0;
+font-family:Tahoma,Arial,sans-serif;
+background:#fafafa;
+color:#222
 }
-
-/* HEADER */
-
 header{
-    background:#111;
-    color:white;
-    padding:15px;
+background:#111;
+color:#fff;
+padding:14px
 }
-
 .header{
-    max-width:1150px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    gap:15px;
-    flex-wrap:wrap;
+max-width:1150px;
+margin:auto;
+display:flex;
+align-items:center;
+gap:12px;
+flex-wrap:wrap
 }
-
-.logo{
-    font-size:21px;
-    font-weight:bold;
-}
-
-.search{
-    flex:1;
-}
-
+.logo{font-size:21px;font-weight:bold}
+.search{flex:1}
 .search input{
-    width:100%;
-    padding:12px 18px;
-    border:0;
-    border-radius:25px;
-    outline:none;
+width:100%;
+padding:12px 18px;
+border:0;
+border-radius:25px;
+outline:none
 }
-
-.cart-button{
-    background:#c9a227;
-    color:#111;
-    border:0;
-    padding:11px 17px;
-    border-radius:25px;
-    cursor:pointer;
-    font-weight:bold;
+button,.gold{cursor:pointer}
+.cart-button,.gold{
+background:#c9a227;
+color:#111;
+border:0;
+padding:11px 18px;
+border-radius:25px;
+font-weight:bold
 }
-
-/* NAV */
-
 nav{
-    background:white;
-    border-bottom:1px solid #eee;
-    text-align:center;
-    padding:14px;
+background:#fff;
+border-bottom:1px solid #eee;
+text-align:center;
+padding:14px
 }
-
 nav a{
-    text-decoration:none;
-    color:#222;
-    margin:0 13px;
-    font-weight:bold;
+color:#222;
+text-decoration:none;
+margin:0 10px;
+font-weight:bold
 }
-
-/* HERO */
-
 .hero{
-    max-width:1150px;
-    margin:25px auto;
-    padding:65px 20px;
-    text-align:center;
-    border-radius:20px;
-    color:white;
-    background:linear-gradient(135deg,#111,#444);
+max-width:1150px;
+margin:25px auto;
+padding:60px 20px;
+text-align:center;
+border-radius:20px;
+color:#fff;
+background:linear-gradient(135deg,#111,#444)
 }
-
-.hero h1{
-    font-size:36px;
-}
-
-.hero p{
-    color:#ddd;
-}
-
-.gold{
-    display:inline-block;
-    background:#c9a227;
-    color:#111;
-    border:0;
-    padding:11px 22px;
-    border-radius:25px;
-    cursor:pointer;
-    font-weight:bold;
-    text-decoration:none;
-}
-
-/* GENERAL */
-
+.hero h1{font-size:36px}
+.hero p{color:#ddd}
 .container{
-    max-width:1150px;
-    margin:45px auto;
-    padding:0 15px;
+max-width:1150px;
+margin:45px auto;
+padding:0 15px
 }
-
-.title{
-    text-align:center;
-    margin-bottom:25px;
+.title{text-align:center;margin-bottom:25px}
+.categories,.products,.features{
+display:grid;
+gap:18px
 }
-
-.title h2{
-    font-size:27px;
+.categories{grid-template-columns:repeat(4,1fr)}
+.products{grid-template-columns:repeat(4,1fr)}
+.features{grid-template-columns:repeat(3,1fr)}
+.category,.product,.feature{
+background:#fff;
+border:1px solid #eee;
+border-radius:15px;
+padding:18px;
+text-align:center
 }
-
-/* CATEGORIES */
-
-.categories{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
+.category{cursor:pointer}
+.category:hover,.product:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 25px #0002
 }
-
-.category{
-    background:white;
-    border:1px solid #eee;
-    border-radius:15px;
-    padding:25px;
-    text-align:center;
-    cursor:pointer;
-    transition:.2s;
-}
-
-.category:hover{
-    transform:translateY(-4px);
-    box-shadow:0 8px 25px #0002;
-}
-
-.category-icon{
-    font-size:42px;
-}
-
-/* PRODUCTS */
-
-.products{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
-
-.product{
-    background:white;
-    border:1px solid #eee;
-    border-radius:15px;
-    padding:15px;
-    text-align:center;
-    transition:.2s;
-}
-
-.product:hover{
-    transform:translateY(-4px);
-    box-shadow:0 8px 25px #0002;
-}
-
+.category-icon{font-size:40px}
 .product-image{
-    height:190px;
-    background:#f2f2f2;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:70px;
+height:190px;
+background:linear-gradient(135deg,#eee,#ddd);
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:75px
 }
-
-.product h3{
-    margin-bottom:5px;
-}
-
+.product h3{margin-bottom:5px}
 .description{
-    color:#777;
-    font-size:13px;
+color:#777;
+font-size:13px;
+min-height:38px
 }
-
 .price{
-    color:#a17c0b;
-    font-weight:bold;
-    font-size:17px;
-    margin:10px;
+color:#a17c0b;
+font-weight:bold;
+font-size:17px;
+margin:10px
 }
-
-.actions{
-    display:flex;
-    gap:7px;
-}
-
+.actions{display:flex;gap:7px}
 .actions button{
-    flex:1;
-    border:0;
-    padding:10px;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
+flex:1;
+border:0;
+padding:10px;
+border-radius:8px;
+font-weight:bold
 }
-
-.details{
-    background:#111;
-    color:white;
-}
-
-.add{
-    background:#c9a227;
-    color:#111;
-}
-
-/* FEATURES */
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.feature{
-    background:white;
-    border:1px solid #eee;
-    border-radius:15px;
-    text-align:center;
-    padding:25px;
-}
-
-/* FOOTER */
-
+.details{background:#111;color:#fff}
+.add{background:#c9a227;color:#111}
 footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:35px;
-    margin-top:50px;
+background:#111;
+color:#fff;
+text-align:center;
+padding:35px;
+margin-top:50px
 }
-
-/* MODAL */
-
 .overlay{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:#0009;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    z-index:100;
+display:none;
+position:fixed;
+inset:0;
+background:#0009;
+align-items:center;
+justify-content:center;
+padding:15px;
+z-index:100
 }
-
 .modal{
-    background:white;
-    width:100%;
-    max-width:550px;
-    max-height:90vh;
-    overflow:auto;
-    border-radius:18px;
-    padding:25px;
-    position:relative;
+background:#fff;
+width:100%;
+max-width:560px;
+max-height:90vh;
+overflow:auto;
+border-radius:18px;
+padding:25px;
+position:relative
 }
-
 .close{
-    position:absolute;
-    left:12px;
-    top:8px;
-    background:none;
-    border:0;
-    font-size:28px;
-    cursor:pointer;
+position:absolute;
+left:12px;
+top:8px;
+background:none;
+border:0;
+font-size:28px
 }
-
 .modal-image{
-    height:200px;
-    background:#f2f2f2;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:80px;
+height:210px;
+background:#eee;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:90px
 }
-
 .cart-item{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid #ddd;
-    padding:12px 0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+border-bottom:1px solid #ddd;
+padding:14px 0
 }
-
+.qty{
+display:flex;
+align-items:center;
+gap:8px
+}
 .qty button{
-    border:1px solid #ddd;
-    background:white;
-    width:30px;
-    height:30px;
-    cursor:pointer;
+border:1px solid #ddd;
+background:#fff;
+width:30px;
+height:30px
 }
-
+.remove{
+background:#e53935;
+color:#fff;
+border:0;
+border-radius:7px;
+padding:7px
+}
 .total{
-    font-size:20px;
-    font-weight:bold;
-    margin:20px 0;
+font-size:20px;
+font-weight:bold;
+margin:20px 0
 }
-
-/* MOBILE */
+.form input,.form textarea{
+width:100%;
+padding:12px;
+margin:6px 0;
+border:1px solid #ddd;
+border-radius:8px;
+font-family:inherit
+}
+.form textarea{height:90px;resize:vertical}
+.empty{text-align:center;padding:20px;color:#777}
 
 @media(max-width:800px){
-
-    .categories{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .products{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .features{
-        grid-template-columns:1fr;
-    }
-
-    .header{
-        justify-content:center;
-    }
-
-    .search{
-        flex-basis:100%;
-        order:3;
-    }
-
-    .hero h1{
-        font-size:28px;
-    }
+.categories,.products{grid-template-columns:repeat(2,1fr)}
+.features{grid-template-columns:1fr}
+.search{flex-basis:100%;order:3}
+.hero h1{font-size:28px}
 }
-
 @media(max-width:450px){
-
-    .products{
-        gap:8px;
-    }
-
-    .product{
-        padding:10px;
-    }
-
-    .product-image{
-        height:140px;
-    }
-
-    .actions{
-        flex-direction:column;
-    }
-
-    nav a{
-        margin:0 5px;
-        font-size:12px;
-    }
+.products{gap:8px}
+.product{padding:10px}
+.product-image{height:140px;font-size:60px}
+.actions{flex-direction:column}
+nav a{margin:0 4px;font-size:12px}
+.logo{font-size:18px}
 }
 </style>
 </head>
 
-
 <body>
 
-
-<!-- HEADER -->
-
 <header>
-
 <div class="header">
 
-<div class="logo">
-ابوالفضل رحیمی نسب
-</div>
+<div class="logo">ابوالفضل رحیمی نسب</div>
 
 <div class="search">
-
-<input
-id="searchInput"
+<input id="searchInput"
 type="text"
-placeholder="جستجوی عطر و ادکلن..."
->
-
+placeholder="🔎 جستجوی عطر و ادکلن...">
 </div>
 
-<button
-class="cart-button"
-onclick="openCart()"
->
-🛒 سبد خرید
-(<span id="cartCount">0</span>)
+<button class="cart-button" onclick="openCart()">
+🛒 سبد خرید (<span id="cartCount">0</span>)
 </button>
 
 </div>
-
 </header>
 
-
-<!-- NAV -->
-
 <nav>
-
-<a href="#">خانه</a>
-
-<a href="#categories">
-دسته‌بندی‌ها
-</a>
-
-<a href="#products">
-محصولات
-</a>
-
-<a href="#about">
-درباره ما
-</a>
-
-<a href="#contact">
-تماس با ما
-</a>
-
+<a href="#top">خانه</a>
+<a href="#categories">دسته‌بندی‌ها</a>
+<a href="#products">محصولات</a>
+<a href="#about">درباره ما</a>
+<a href="#contact">تماس با ما</a>
 </nav>
 
-
-<!-- HERO -->
+<div id="top"></div>
 
 <section class="hero">
-
-<h1>
-دنیای عطر و ادکلن
-</h1>
-
-<p>
-انتخاب رایحه خاص برای سلیقه خاص شما
-</p>
-
-<a
-class="gold"
-href="#products"
->
-مشاهده محصولات
-</a>
-
+<h1>دنیای عطر و ادکلن</h1>
+<p>انتخاب رایحه خاص برای سلیقه خاص شما</p>
+<a class="gold" href="#products">مشاهده محصولات</a>
 </section>
 
-
-<!-- CATEGORIES -->
-
-<section
-class="container"
-id="categories"
->
+<section class="container" id="categories">
 
 <div class="title">
-
-<h2>
-دسته‌بندی عطرها
-</h2>
-
-<p>
-دسته مورد نظر خود را انتخاب کنید
-</p>
-
+<h2>دسته‌بندی عطرها</h2>
+<p>دسته مورد نظر خود را انتخاب کنید</p>
 </div>
-
 
 <div class="categories">
 
-
-<div
-class="category"
-onclick="filterCategory('زنانه')"
->
-
-<div class="category-icon">
-🌹
+<div class="category" onclick="filterCategory('زنانه')">
+<div class="category-icon">🌹</div>
+<h3>عطر زنانه</h3>
 </div>
 
-<h3>
-عطر زنانه
-</h3>
-
+<div class="category" onclick="filterCategory('مردانه')">
+<div class="category-icon">🖤</div>
+<h3>عطر مردانه</h3>
 </div>
 
-
-<div
-class="category"
-onclick="filterCategory('مردانه')"
->
-
-<div class="category-icon">
-🖤
+<div class="category" onclick="filterCategory('اسپرت')">
+<div class="category-icon">⚡</div>
+<h3>عطر اسپرت</h3>
 </div>
 
-<h3>
-عطر مردانه
-</h3>
-
+<div class="category" onclick="filterCategory('خاص')">
+<div class="category-icon">💎</div>
+<h3>عطرهای خاص</h3>
 </div>
 
-
-<div
-class="category"
-onclick="filterCategory('اسپرت')"
->
-
-<div class="category-icon">
-⚡
 </div>
-
-<h3>
-عطر اسپرت
-</h3>
-
-</div>
-
-
-<div
-class="category"
-onclick="filterCategory('خاص')"
->
-
-<div class="category-icon">
-💎
-</div>
-
-<h3>
-عطرهای خاص
-</h3>
-
-</div>
-
-
-</div>
-
 </section>
 
-
-<!-- PRODUCTS -->
-
-<section
-class="container"
-id="products"
->
+<section class="container" id="products">
 
 <div class="title">
+<h2>محصولات فروشگاه</h2>
+<p>محصول مورد نظر خود را انتخاب کنید</p>
 
-<h2>
-محصولات فروشگاه
-</h2>
-
-<p>
-محصول مورد نظر خود را انتخاب کنید
-</p>
-
+<button class="gold" onclick="renderProducts()">
+نمایش همه محصولات
+</button>
 </div>
 
-
-<div
-class="products"
-id="productGrid"
->
-</div>
+<div class="products" id="productGrid"></div>
 
 </section>
 
-
-<!-- FEATURES -->
-
-<section
-class="container"
-id="about"
->
+<section class="container" id="about">
 
 <div class="features">
 
+<div class="feature">
+<div>🚚</div>
+<h3>ارسال سفارش</h3>
+<p>ارسال سفارش به سراسر کشور</p>
+</div>
 
 <div class="feature">
-
-<div>
-🚚
+<div>✅</div>
+<h3>تضمین کیفیت</h3>
+<p>ارائه محصولات با کیفیت</p>
 </div>
-
-<h3>
-ارسال سفارش
-</h3>
-
-<p>
-ارسال سفارش به سراسر کشور
-</p>
-
-</div>
-
 
 <div class="feature">
-
-<div>
-✅
+<div>📞</div>
+<h3>پشتیبانی</h3>
+<p>پاسخگویی به مشتریان</p>
 </div>
 
-<h3>
-تضمین کیفیت
-</h3>
-
-<p>
-ارائه محصولات با کیفیت
-</p>
-
 </div>
-
-
-<div class="feature">
-
-<div>
-📞
-</div>
-
-<h3>
-پشتیبانی
-</h3>
-
-<p>
-پاسخگویی به مشتریان
-</p>
-
-</div>
-
-
-</div>
-
 </section>
 
-
-<!-- FOOTER -->
-
 <footer id="contact">
-
-<strong>
-ابوالفضل رحیمی نسب
-</strong>
-
+<strong>ابوالفضل رحیمی نسب</strong>
 <br>
-
 فروشگاه عطر و ادکلن
-
-<br>
-
+<br><br>
 © تمامی حقوق محفوظ است
-
 </footer>
-
 
 <!-- PRODUCT MODAL -->
 
-<div
-class="overlay"
-id="productModal"
->
+<div class="overlay" id="productModal">
 
 <div class="modal">
 
-<button
-class="close"
-onclick="closeModal('productModal')"
->
-×
-</button>
+<button class="close"
+onclick="closeModal('productModal')">×</button>
 
-<div id="productDetails">
-</div>
+<div id="productDetails"></div>
 
 </div>
-
 </div>
 
+<!-- CART -->
 
-<!-- CART MODAL -->
-
-<div
-class="overlay"
-id="cartModal"
->
+<div class="overlay" id="cartModal">
 
 <div class="modal">
 
-<button
-class="close"
-onclick="closeModal('cartModal')"
->
-×
-</button>
+<button class="close"
+onclick="closeModal('cartModal')">×</button>
 
-<h2>
-🛒 سبد خرید
-</h2>
+<h2>🛒 سبد خرید</h2>
 
-<div id="cartItems">
+<div id="cartItems"></div>
+
+<div class="total" id="cartTotal"></div>
+
+<div class="form">
+
+<h3>اطلاعات سفارش</h3>
+
+<input id="customerName"
+placeholder="نام و نام خانوادگی">
+
+<input id="customerPhone"
+type="tel"
+placeholder="شماره موبایل">
+
+<textarea id="customerAddress"
+placeholder="آدرس کامل"></textarea>
+
 </div>
 
-<div
-class="total"
-id="cartTotal"
->
-</div>
-
-<button
-class="gold"
-onclick="checkout()"
->
+<button class="gold"
+onclick="checkout()">
 ثبت سفارش
 </button>
 
 </div>
-
 </div>
-
 
 <script>
 
-
-/* PRODUCTS */
-
-const products = [
+const products=[
 
 {
 id:1,
@@ -810,63 +474,43 @@ description:"رایحه‌ای شاداب و خاص."
 
 ];
 
-
-let cart =
-JSON.parse(
-localStorage.getItem("perfumeCart")
-|| "[]"
+let cart=JSON.parse(
+localStorage.getItem("perfumeCart")||"[]"
 );
 
-
-/* PRICE */
-
 function formatPrice(price){
-
-return price.toLocaleString("fa-IR")
-+
-" تومان";
-
+return price.toLocaleString("fa-IR")+" تومان";
 }
-
-
-/* SHOW PRODUCTS */
 
 function renderProducts(list=products){
 
-const grid =
-document.getElementById("productGrid");
+const grid=document.getElementById("productGrid");
 
-grid.innerHTML = "";
+grid.innerHTML="";
 
-
-if(list.length === 0){
-
-grid.innerHTML =
-"<p>محصولی پیدا نشد.</p>";
-
+if(list.length===0){
+grid.innerHTML='<div class="empty">محصولی پیدا نشد.</div>';
 return;
-
 }
 
+list.forEach(product=>{
 
-list.forEach(product => {
-
-grid.innerHTML += `
+grid.innerHTML+=`
 
 <div class="product">
 
 <div class="product-image">
-
 ${product.icon}
-
 </div>
 
-<h3>
-${product.name}
-</h3>
+<h3>${product.name}</h3>
 
 <div class="description">
 ${product.description}
+</div>
+
+<div>
+دسته: ${product.category}
 </div>
 
 <div class="price">
@@ -875,18 +519,14 @@ ${formatPrice(product.price)}
 
 <div class="actions">
 
-<button
-class="details"
-onclick="showProduct(${product.id})"
->
+<button class="details"
+onclick="showProduct(${product.id})">
 مشاهده محصول
 </button>
 
-<button
-class="add"
-onclick="addToCart(${product.id})"
->
-افزودن
+<button class="add"
+onclick="addToCart(${product.id})">
+افزودن 🛒
 </button>
 
 </div>
@@ -896,96 +536,52 @@ onclick="addToCart(${product.id})"
 `;
 
 });
-
 }
-
-
-/* PRODUCT DETAILS */
 
 function showProduct(id){
 
-const product =
-products.find(
-item => item.id === id
-);
+const product=products.find(p=>p.id===id);
 
-document.getElementById(
-"productDetails"
-).innerHTML = `
+document.getElementById("productDetails").innerHTML=`
 
 <div class="modal-image">
 ${product.icon}
 </div>
 
-<h2>
-${product.name}
-</h2>
+<h2>${product.name}</h2>
 
-<p>
-${product.description}
-</p>
+<p>${product.description}</p>
 
-<p>
-دسته‌بندی:
-${product.category}
-</p>
+<p>دسته‌بندی: ${product.category}</p>
 
 <div class="price">
 ${formatPrice(product.price)}
 </div>
 
-<button
-class="gold"
-onclick="addToCart(${product.id});closeModal('productModal')"
->
+<button class="gold"
+onclick="addToCart(${product.id});closeModal('productModal')">
 افزودن به سبد خرید
 </button>
 
 `;
 
-document.getElementById(
-"productModal"
-).style.display =
-"flex";
-
+document.getElementById("productModal").style.display="flex";
 }
-
-
-/* ADD CART */
 
 function addToCart(id){
 
-const item =
-cart.find(
-item => item.id === id
-);
+const item=cart.find(i=>i.id===id);
 
 if(item){
-
 item.quantity++;
-
 }else{
-
-cart.push({
-
-id:id,
-
-quantity:1
-
-});
-
+cart.push({id:id,quantity:1});
 }
 
 saveCart();
 
-alert(
-"محصول با موفقیت به سبد خرید اضافه شد ✅"
-);
-
+alert("محصول به سبد خرید اضافه شد ✅");
 }
-
-
-/* SAVE CART */
 
 function saveCart(){
 
@@ -995,114 +591,77 @@ JSON.stringify(cart)
 );
 
 updateCartCount();
-
 }
-
-
-/* CART COUNT */
 
 function updateCartCount(){
 
-let count = 0;
+let count=0;
 
-cart.forEach(item => {
-
-count += item.quantity;
-
+cart.forEach(item=>{
+count+=item.quantity;
 });
 
-document.getElementById(
-"cartCount"
-).textContent =
-count;
-
+document.getElementById("cartCount").textContent=count;
 }
-
-
-/* OPEN CART */
 
 function openCart(){
 
 renderCart();
 
-document.getElementById(
-"cartModal"
-).style.display =
-"flex";
-
+document.getElementById("cartModal").style.display="flex";
 }
-
-
-/* RENDER CART */
 
 function renderCart(){
 
-const container =
-document.getElementById(
-"cartItems"
-);
+const container=document.getElementById("cartItems");
 
-if(cart.length === 0){
+if(cart.length===0){
 
-container.innerHTML =
-"<p>سبد خرید خالی است.</p>";
+container.innerHTML=
+'<div class="empty">سبد خرید خالی است 🛒</div>';
 
-document.getElementById(
-"cartTotal"
-).textContent = "";
+document.getElementById("cartTotal").textContent="";
 
 return;
-
 }
 
+let total=0;
 
-let total = 0;
+container.innerHTML="";
 
-container.innerHTML = "";
+cart.forEach(item=>{
 
+const product=products.find(p=>p.id===item.id);
 
-cart.forEach(item => {
+if(!product)return;
 
-const product =
-products.find(
-product => product.id === item.id
-);
+total+=product.price*item.quantity;
 
-total +=
-product.price *
-item.quantity;
-
-
-container.innerHTML += `
+container.innerHTML+=`
 
 <div class="cart-item">
 
 <div>
-
-<strong>
-${product.name}
-</strong>
-
+<strong>${product.name}</strong>
 <br>
-
 ${formatPrice(product.price)}
-
 </div>
 
 <div class="qty">
 
-<button
-onclick="changeQuantity(${product.id},-1)"
->
+<button onclick="changeQuantity(${product.id},-1)">
 −
 </button>
 
-${item.quantity}
+<span>${item.quantity}</span>
 
-<button
-onclick="changeQuantity(${product.id},1)"
->
+<button onclick="changeQuantity(${product.id},1)">
 +
+</button>
+
+<button class="remove"
+onclick="removeFromCart(${product.id})">
+حذف
 </button>
 
 </div>
@@ -1113,143 +672,98 @@ onclick="changeQuantity(${product.id},1)"
 
 });
 
-
-document.getElementById(
-"cartTotal"
-).textContent =
-"مجموع: " +
-formatPrice(total);
-
+document.getElementById("cartTotal").textContent=
+"مجموع: "+formatPrice(total);
 }
-
-
-/* CHANGE QUANTITY */
 
 function changeQuantity(id,change){
 
-const item =
-cart.find(
-item => item.id === id
-);
+const item=cart.find(i=>i.id===id);
 
-if(!item){
-return;
-}
+if(!item)return;
 
-item.quantity += change;
+item.quantity+=change;
 
-
-if(item.quantity <= 0){
-
-cart =
-cart.filter(
-item => item.id !== id
-);
-
+if(item.quantity<=0){
+cart=cart.filter(i=>i.id!==id);
 }
 
 saveCart();
-
 renderCart();
-
 }
 
+function removeFromCart(id){
 
-/* CATEGORY */
+cart=cart.filter(i=>i.id!==id);
+
+saveCart();
+renderCart();
+}
 
 function filterCategory(category){
 
-const filtered =
-products.filter(
-product =>
-product.category === category
+const filtered=products.filter(
+p=>p.category===category
 );
 
 renderProducts(filtered);
 
-document
-.getElementById("products")
-.scrollIntoView({
-behavior:"smooth"
-});
-
+document.getElementById("products")
+.scrollIntoView({behavior:"smooth"});
 }
 
+document.getElementById("searchInput")
+.addEventListener("input",function(){
 
-/* SEARCH */
-
-document
-.getElementById("searchInput")
-.addEventListener(
-"input",
-function(){
-
-const search =
-this.value
+const search=this.value
 .toLowerCase()
 .trim();
 
-const filtered =
-products.filter(
-product =>
-
-product.name
-.toLowerCase()
-.includes(search)
-
-||
-
-product.category
-.toLowerCase()
-.includes(search)
-
+const filtered=products.filter(p=>
+p.name.toLowerCase().includes(search)||
+p.category.toLowerCase().includes(search)||
+p.description.toLowerCase().includes(search)
 );
 
 renderProducts(filtered);
-
 });
-
-
-/* CLOSE MODAL */
 
 function closeModal(id){
 
-document.getElementById(id)
-.style.display =
-"none";
-
+document.getElementById(id).style.display="none";
 }
-
-
-/* CHECKOUT */
 
 function checkout(){
 
-if(cart.length === 0){
+if(cart.length===0){
 
-alert(
-"سبد خرید شما خالی است."
-);
-
+alert("سبد خرید شما خالی است.");
 return;
+}
 
+const name=document.getElementById("customerName").value.trim();
+const phone=document.getElementById("customerPhone").value.trim();
+const address=document.getElementById("customerAddress").value.trim();
+
+if(!name||!phone||!address){
+
+alert("لطفاً نام، شماره موبایل و آدرس را کامل کنید.");
+return;
 }
 
 alert(
-"سبد خرید آماده ثبت سفارش است. اتصال به واتساپ یا درگاه پرداخت را می‌توانیم در مرحله بعد اضافه کنیم."
+"اطلاعات سفارش دریافت شد ✅\n\n"+
+"نام: "+name+
+"\nموبایل: "+phone+
+"\n\nدر مرحله بعد درگاه پرداخت واقعی را وصل می‌کنیم."
 );
 
 }
-
-
-/* START */
 
 renderProducts();
-
 updateCartCount();
-
 
 </script>
 
 </body>
-</html>
+    </html>
