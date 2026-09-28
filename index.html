@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ابوالفضل رحیمی نسب | فروشگاه</title>
+<title>فروشگاه عطر ابوالفضل رحیمی نسب</title>
 
 <style>
 *{
@@ -13,47 +13,52 @@
 
 body{
   margin:0;
-  background:#fff;
-  color:#222;
   font-family:Tahoma,Arial,sans-serif;
+  background:#faf9f7;
+  color:#222;
 }
 
-/* نوار بالایی */
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* نوار بالا */
 .top{
-  background:#151515;
-  color:white;
+  background:#181818;
+  color:#fff;
   text-align:center;
   padding:10px;
   font-size:12px;
 }
 
 /* هدر */
-.header{
-  background:white;
+header{
+  background:#fff;
   border-bottom:1px solid #eee;
 }
 
-.nav{
-  max-width:1180px;
+.header{
+  max-width:1200px;
   margin:auto;
-  min-height:76px;
-  padding:12px 18px;
+  min-height:82px;
+  padding:15px 20px;
   display:flex;
   align-items:center;
-  gap:28px;
+  gap:30px;
 }
 
 .logo{
-  font-size:21px;
+  font-size:20px;
   font-weight:bold;
   white-space:nowrap;
 }
 
-.logo small{
+.logo span{
   display:block;
-  color:#999;
+  color:#a17c45;
   font-size:10px;
-  margin-top:5px;
+  margin-top:6px;
   font-weight:normal;
 }
 
@@ -64,13 +69,8 @@ nav{
   color:#555;
 }
 
-nav a{
-  text-decoration:none;
-  color:inherit;
-}
-
 nav a:hover{
-  color:#000;
+  color:#a17c45;
 }
 
 .search{
@@ -78,41 +78,41 @@ nav a:hover{
   width:270px;
   height:42px;
   border:1px solid #ddd;
-  border-radius:8px;
-  padding:0 14px;
+  border-radius:9px;
+  padding:0 15px;
   font-family:inherit;
   outline:none;
 }
 
-.search:focus{
-  border-color:#aaa;
-}
-
 /* بنر */
 .hero{
-  max-width:1180px;
-  margin:24px auto;
-  padding:0 18px;
+  max-width:1200px;
+  margin:25px auto;
+  padding:0 20px;
 }
 
 .banner{
-  background:#f3f1ec;
-  border-radius:18px;
-  min-height:270px;
-  padding:45px;
+  min-height:330px;
+  border-radius:22px;
+  background:linear-gradient(135deg,#eee7dc,#f8f5ef);
   display:flex;
   align-items:center;
   justify-content:space-between;
+  padding:50px;
   overflow:hidden;
 }
 
 .banner-text{
-  max-width:600px;
+  max-width:620px;
 }
 
 .banner h1{
   margin:0 0 15px;
-  font-size:32px;
+  font-size:34px;
+}
+
+.banner h1 span{
+  color:#a17c45;
 }
 
 .banner p{
@@ -121,134 +121,151 @@ nav a:hover{
   font-size:14px;
 }
 
-.banner-button{
+.btn{
   display:inline-block;
-  background:#151515;
+  background:#171717;
   color:white;
-  padding:12px 24px;
-  border-radius:8px;
-  text-decoration:none;
+  padding:13px 27px;
+  border-radius:9px;
   font-size:13px;
-  margin-top:10px;
+  margin-top:12px;
 }
 
-.banner-icon{
-  font-size:110px;
-  opacity:.15;
+.perfume{
+  font-size:145px;
+  opacity:.18;
 }
 
-/* عنوان بخش */
+/* بخش‌ها */
 .section{
-  max-width:1180px;
-  margin:45px auto;
-  padding:0 18px;
+  max-width:1200px;
+  margin:55px auto;
+  padding:0 20px;
 }
 
-.section-title{
+.title{
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  margin-bottom:20px;
-}
-
-.section-title h2{
-  margin:0;
-  font-size:21px;
-}
-
-.section-title span{
-  color:#999;
-  font-size:12px;
-}
-
-/* کارت‌ها */
-.products{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-}
-
-.card{
-  border:1px solid #eee;
-  border-radius:14px;
-  overflow:hidden;
-  background:white;
-  transition:.2s;
-}
-
-.card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
-
-.card-image{
-  height:170px;
-  background:#f5f5f5;
-  display:flex;
   align-items:center;
-  justify-content:center;
-  font-size:65px;
+  margin-bottom:23px;
 }
 
-.card-body{
-  padding:17px;
-}
-
-.card-body h3{
-  margin:0 0 10px;
-  font-size:15px;
-}
-
-.card-body p{
+.title h2{
   margin:0;
-  color:#888;
-  font-size:12px;
-  line-height:1.8;
+  font-size:22px;
 }
 
-.price{
-  margin-top:15px;
-  font-weight:bold;
-  font-size:14px;
+.title span{
+  color:#999;
+  font-size:11px;
 }
 
 /* دسته‌بندی */
 .categories{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:15px;
+  gap:18px;
 }
 
 .category{
-  background:#f7f7f7;
-  border-radius:14px;
-  padding:25px 15px;
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:16px;
+  padding:28px 15px;
   text-align:center;
-  text-decoration:none;
-  color:#222;
+  transition:.2s;
+}
+
+.category:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px #00000010;
 }
 
 .category-icon{
-  font-size:38px;
-  margin-bottom:10px;
+  font-size:42px;
+  margin-bottom:13px;
 }
 
 .category h3{
-  margin:0;
-  font-size:14px;
+  margin:0 0 8px;
+  font-size:15px;
 }
 
 .category p{
+  margin:0;
   color:#999;
   font-size:11px;
 }
 
+/* محصولات */
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.product{
+  background:white;
+  border:1px solid #eee;
+  border-radius:16px;
+  overflow:hidden;
+  transition:.2s;
+}
+
+.product:hover{
+  transform:translateY(-5px);
+  box-shadow:0 12px 28px #00000012;
+}
+
+.product-image{
+  height:210px;
+  background:#f4f1eb;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:90px;
+}
+
+.product-body{
+  padding:18px;
+}
+
+.product-body h3{
+  margin:0 0 8px;
+  font-size:15px;
+}
+
+.product-body p{
+  margin:0;
+  color:#999;
+  font-size:11px;
+  line-height:1.8;
+}
+
+.price{
+  margin-top:14px;
+  font-weight:bold;
+  color:#a17c45;
+  font-size:14px;
+}
+
+.buy{
+  display:block;
+  margin-top:14px;
+  text-align:center;
+  background:#171717;
+  color:#fff;
+  border-radius:8px;
+  padding:10px;
+  font-size:12px;
+}
+
 /* امکانات */
 .features{
-  background:#151515;
-  color:white;
-  border-radius:18px;
-  padding:30px;
+  background:#181818;
+  color:#fff;
+  border-radius:20px;
+  padding:32px;
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
@@ -260,77 +277,63 @@ nav a:hover{
 
 .feature-icon{
   font-size:32px;
-  margin-bottom:10px;
 }
 
 .feature h3{
   font-size:14px;
-  margin:5px 0 10px;
+  margin:10px 0;
 }
 
 .feature p{
+  margin:0;
   color:#aaa;
   font-size:11px;
   line-height:1.8;
-  margin:0;
-}
-
-/* درباره */
-.about{
-  background:#f7f7f7;
-  border-radius:18px;
-  padding:30px;
-  line-height:2;
-  font-size:13px;
-  color:#555;
 }
 
 /* فوتر */
 footer{
-  margin-top:50px;
   background:#111;
-  color:white;
-  padding:40px 20px;
+  color:#fff;
+  margin-top:60px;
+  padding:45px 20px 20px;
 }
 
-.footer-inner{
-  max-width:1180px;
+.footer{
+  max-width:1200px;
   margin:auto;
   display:grid;
   grid-template-columns:2fr 1fr 1fr;
-  gap:30px;
+  gap:35px;
 }
 
 footer h3{
+  font-size:15px;
   margin-top:0;
-  font-size:16px;
 }
 
 footer p,
 footer a{
   color:#aaa;
-  font-size:12px;
+  font-size:11px;
   line-height:2;
-  text-decoration:none;
 }
 
-.copyright{
-  max-width:1180px;
+.copy{
+  max-width:1200px;
   margin:30px auto 0;
   padding-top:20px;
   border-top:1px solid #333;
-  color:#777;
-  font-size:11px;
   text-align:center;
+  color:#777;
+  font-size:10px;
 }
 
 /* موبایل */
-@media(max-width:800px){
+@media(max-width:850px){
 
-  .nav{
+  .header{
     flex-wrap:wrap;
-    height:auto;
-    padding:18px;
   }
 
   nav{
@@ -341,7 +344,7 @@ footer a{
   }
 
   .search{
-    width:180px;
+    width:200px;
   }
 
   .banner{
@@ -349,31 +352,28 @@ footer a{
   }
 
   .banner h1{
-    font-size:24px;
+    font-size:25px;
   }
 
-  .banner-icon{
-    font-size:70px;
+  .perfume{
+    font-size:90px;
   }
 
+  .categories,
   .products{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .categories{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .features{
-    grid-template-columns:1fr;
-  }
-
-  .footer-inner{
+  .footer{
     grid-template-columns:1fr;
   }
 }
 
-@media(max-width:480px){
+@media(max-width:500px){
+
+  .header{
+    padding:15px;
+  }
 
   .logo{
     font-size:17px;
@@ -381,24 +381,25 @@ footer a{
 
   .search{
     width:100%;
-    margin-top:10px;
+    margin-top:5px;
   }
 
   .banner{
-    min-height:230px;
+    min-height:280px;
     padding:25px;
   }
 
-  .banner-icon{
+  .perfume{
     display:none;
   }
 
+  .categories,
   .products{
     grid-template-columns:1fr;
   }
 
-  .categories{
-    grid-template-columns:1fr 1fr;
+  .features{
+    grid-template-columns:1fr;
   }
 }
 </style>
@@ -406,305 +407,312 @@ footer a{
 
 <body>
 
-<!-- نوار بالایی -->
 <div class="top">
-  به سایت ابوالفضل رحیمی نسب خوش آمدید
+🌸 فروشگاه عطر و ادکلن ابوالفضل رحیمی نسب
 </div>
 
-<!-- هدر -->
-<header class="header">
-  <div class="nav">
+<header>
 
-    <div class="logo">
-      ابوالفضل رحیمی نسب
-      <small>فروشگاه اینترنتی</small>
-    </div>
+<div class="header">
 
-    <nav>
-      <a href="#home">خانه</a>
-      <a href="#products">محصولات</a>
-      <a href="#categories">دسته‌بندی‌ها</a>
-      <a href="#about">درباره ما</a>
-      <a href="#contact">تماس با ما</a>
-    </nav>
+<div class="logo">
+ابوالفضل رحیمی نسب
+<span>فروشگاه عطر و ادکلن</span>
+</div>
 
-    <input
-      class="search"
-      type="text"
-      placeholder="جستجوی محصول..."
-      onkeyup="searchProducts(this.value)"
-    >
+<nav>
+<a href="#home">خانه</a>
+<a href="#categories">دسته‌بندی‌ها</a>
+<a href="#products">محصولات</a>
+<a href="#about">درباره ما</a>
+<a href="#contact">تماس با ما</a>
+</nav>
 
-  </div>
+<input
+class="search"
+type="text"
+placeholder="جستجوی عطر..."
+onkeyup="searchProducts(this.value)"
+>
+
+</div>
+
 </header>
 
-<!-- بنر -->
 <section class="hero" id="home">
 
-  <div class="banner">
+<div class="banner">
 
-    <div class="banner-text">
+<div class="banner-text">
 
-      <h1>
-        فروشگاه ابوالفضل رحیمی نسب
-      </h1>
+<h1>
+دنیای <span>عطر و ادکلن</span>
+</h1>
 
-      <p>
-        به فروشگاه ما خوش آمدید.
-        محصولات و خدمات مورد نیاز خود را
-        در محیطی ساده و زیبا مشاهده کنید.
-      </p>
+<p>
+به فروشگاه عطر ابوالفضل رحیمی نسب خوش آمدید.
+محلی برای معرفی و عرضه عطر و ادکلن‌های متنوع
+برای خانم‌ها و آقایان.
+</p>
 
-      <a href="#products" class="banner-button">
-        مشاهده محصولات
-      </a>
+<a href="#products" class="btn">
+مشاهده عطرها
+</a>
 
-    </div>
+</div>
 
-    <div class="banner-icon">
-      🛍️
-    </div>
+<div class="perfume">
+🌸
+</div>
 
-  </div>
+</div>
 
 </section>
 
-<!-- دسته بندی -->
 <section class="section" id="categories">
 
-  <div class="section-title">
-    <h2>دسته‌بندی‌ها</h2>
-    <span>دسته‌بندی محصولات</span>
-  </div>
+<div class="title">
+<h2>دسته‌بندی عطرها</h2>
+<span>انتخاب بر اساس نوع</span>
+</div>
 
-  <div class="categories">
+<div class="categories">
 
-    <a href="#products" class="category">
-      <div class="category-icon">📱</div>
-      <h3>موبایل</h3>
-      <p>گوشی و لوازم جانبی</p>
-    </a>
+<a class="category" href="#products">
+<div class="category-icon">🌹</div>
+<h3>عطر زنانه</h3>
+<p>رایحه‌های زنانه</p>
+</a>
 
-    <a href="#products" class="category">
-      <div class="category-icon">💻</div>
-      <h3>لپ‌تاپ</h3>
-      <p>لپ‌تاپ و تجهیزات</p>
-    </a>
+<a class="category" href="#products">
+<div class="category-icon">🧔</div>
+<h3>عطر مردانه</h3>
+<p>رایحه‌های مردانه</p>
+</a>
 
-    <a href="#products" class="category">
-      <div class="category-icon">🎧</div>
-      <h3>لوازم دیجیتال</h3>
-      <p>محصولات دیجیتال</p>
-    </a>
+<a class="category" href="#products">
+<div class="category-icon">✨</div>
+<h3>عطر خاص</h3>
+<p>رایحه‌های خاص و متفاوت</p>
+</a>
 
-    <a href="#products" class="category">
-      <div class="category-icon">🎁</div>
-      <h3>سایر محصولات</h3>
-      <p>محصولات متنوع</p>
-    </a>
+<a class="category" href="#products">
+<div class="category-icon">🔥</div>
+<h3>پرفروش‌ها</h3>
+<p>محبوب‌ترین محصولات</p>
+</a>
 
-  </div>
+</div>
 
 </section>
 
-<!-- محصولات -->
 <section class="section" id="products">
 
-  <div class="section-title">
-    <h2>محصولات منتخب</h2>
-    <span>محصولات فروشگاه</span>
-  </div>
+<div class="title">
+<h2>پرفروش‌ترین عطرها</h2>
+<span>محصولات منتخب</span>
+</div>
 
-  <div class="products" id="productList">
+<div class="products" id="productList">
 
-    <div class="card product">
+<div class="product">
 
-      <div class="card-image">
-        📱
-      </div>
+<div class="product-image">
+🌹
+</div>
 
-      <div class="card-body">
-        <h3>گوشی موبایل</h3>
+<div class="product-body">
 
-        <p>
-          گوشی موبایل با کیفیت مناسب
-        </p>
+<h3>عطر زنانه رز</h3>
 
-        <div class="price">
-          تماس بگیرید
-        </div>
-      </div>
+<p>
+رایحه‌ای لطیف و جذاب برای خانم‌ها
+</p>
 
-    </div>
+<div class="price">
+قیمت: تماس بگیرید
+</div>
 
-    <div class="card product">
+<a class="buy" href="#contact">
+مشاهده محصول
+</a>
 
-      <div class="card-image">
-        💻
-      </div>
+</div>
 
-      <div class="card-body">
-        <h3>لپ‌تاپ</h3>
+</div>
 
-        <p>
-          انواع لپ‌تاپ و کامپیوتر
-        </p>
+<div class="product">
 
-        <div class="price">
-          تماس بگیرید
-        </div>
-      </div>
+<div class="product-image">
+🖤
+</div>
 
-    </div>
+<div class="product-body">
 
-    <div class="card product">
+<h3>عطر مردانه بلک</h3>
 
-      <div class="card-image">
-        🎧
-      </div>
+<p>
+رایحه‌ای گرم و ماندگار برای آقایان
+</p>
 
-      <div class="card-body">
-        <h3>هدفون</h3>
+<div class="price">
+قیمت: تماس بگیرید
+</div>
 
-        <p>
-          هدفون و لوازم صوتی
-        </p>
+<a class="buy" href="#contact">
+مشاهده محصول
+</a>
 
-        <div class="price">
-          تماس بگیرید
-        </div>
-      </div>
+</div>
 
-    </div>
+</div>
 
-    <div class="card product">
+<div class="product">
 
-      <div class="card-image">
-        ⌚
-      </div>
+<div class="product-image">
+🌸
+</div>
 
-      <div class="card-body">
-        <h3>ساعت هوشمند</h3>
+<div class="product-body">
 
-        <p>
-          ساعت و لوازم هوشمند
-        </p>
+<h3>عطر فلورال</h3>
 
-        <div class="price">
-          تماس بگیرید
-        </div>
-      </div>
+<p>
+رایحه‌ای لطیف و گل‌فام
+</p>
 
-    </div>
+<div class="price">
+قیمت: تماس بگیرید
+</div>
 
-  </div>
+<a class="buy" href="#contact">
+مشاهده محصول
+</a>
+
+</div>
+
+</div>
+
+<div class="product">
+
+<div class="product-image">
+💎
+</div>
+
+<div class="product-body">
+
+<h3>عطر لوکس</h3>
+
+<p>
+رایحه‌ای خاص و شیک
+</p>
+
+<div class="price">
+قیمت: تماس بگیرید
+</div>
+
+<a class="buy" href="#contact">
+مشاهده محصول
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<!-- امکانات -->
 <section class="section">
 
-  <div class="features">
+<div class="features">
 
-    <div class="feature">
-      <div class="feature-icon">🚚</div>
-      <h3>ارسال سریع</h3>
-      <p>
-        ارسال سفارش‌ها در سریع‌ترین زمان ممکن
-      </p>
-    </div>
+<div class="feature">
+<div class="feature-icon">🚚</div>
+<h3>ارسال سفارش</h3>
+<p>
+ارسال محصولات در سریع‌ترین زمان ممکن
+</p>
+</div>
 
-    <div class="feature">
-      <div class="feature-icon">🔒</div>
-      <h3>خرید مطمئن</h3>
-      <p>
-        تلاش برای ارائه خدمات مطمئن به مشتریان
-      </p>
-    </div>
+<div class="feature">
+<div class="feature-icon">💎</div>
+<h3>محصولات متنوع</h3>
+<p>
+تنوع عطر و ادکلن برای سلیقه‌های مختلف
+</p>
+</div>
 
-    <div class="feature">
-      <div class="feature-icon">☎️</div>
-      <h3>پشتیبانی</h3>
-      <p>
-        پاسخگویی و پشتیبانی از مشتریان
-      </p>
-    </div>
+<div class="feature">
+<div class="feature-icon">☎️</div>
+<h3>پشتیبانی</h3>
+<p>
+برای اطلاعات و سفارش با ما تماس بگیرید
+</p>
+</div>
 
-  </div>
+</div>
 
 </section>
 
-<!-- درباره ما -->
 <section class="section" id="about">
 
-  <div class="section-title">
-    <h2>درباره ما</h2>
-  </div>
+<div class="title">
+<h2>درباره فروشگاه</h2>
+</div>
 
-  <div class="about">
+<div style="background:#fff;border:1px solid #eee;border-radius:16px;padding:28px;line-height:2;font-size:13px;color:#666">
 
-    <strong>ابوالفضل رحیمی نسب</strong>
+<strong>ابوالفضل رحیمی نسب</strong>
 
-    <br>
+<br><br>
 
-    این وب‌سایت برای معرفی محصولات و خدمات
-    و ایجاد یک فروشگاه اینترنتی ساده و کاربردی
-    طراحی شده است.
+فروشگاه عطر و ادکلن ابوالفضل رحیمی نسب،
+با هدف معرفی و ارائه عطرهای متنوع برای
+خانم‌ها و آقایان طراحی شده است.
 
-  </div>
+</div>
 
 </section>
 
-<!-- فوتر -->
 <footer id="contact">
 
-  <div class="footer-inner">
+<div class="footer">
 
-    <div>
-      <h3>ابوالفضل رحیمی نسب</h3>
+<div>
+<h3>ابوالفضل رحیمی نسب</h3>
 
-      <p>
-        فروشگاه اینترنتی ابوالفضل رحیمی نسب
-      </p>
+<p>
+فروشگاه عطر و ادکلن
+</p>
 
-      <p>
-        برای اطلاعات بیشتر با ما در ارتباط باشید.
-      </p>
-    </div>
+<p>
+برای دریافت اطلاعات بیشتر درباره محصولات
+با ما در ارتباط باشید.
+</p>
+</div>
 
-    <div>
-      <h3>دسترسی سریع</h3>
+<div>
+<h3>دسترسی سریع</h3>
 
-      <p>
-        <a href="#home">خانه</a>
-      </p>
+<p><a href="#home">خانه</a></p>
+<p><a href="#products">محصولات</a></p>
+<p><a href="#categories">دسته‌بندی‌ها</a></p>
+</div>
 
-      <p>
-        <a href="#products">محصولات</a>
-      </p>
+<div>
+<h3>تماس با ما</h3>
 
-      <p>
-        <a href="#about">درباره ما</a>
-      </p>
-    </div>
+<p>📞 تلفن: در حال تکمیل</p>
+<p>📧 ایمیل: در حال تکمیل</p>
 
-    <div>
-      <h3>ارتباط با ما</h3>
+</div>
 
-      <p>
-        📞 تلفن: در حال تکمیل
-      </p>
+</div>
 
-      <p>
-        📧 ایمیل: در حال تکمیل
-      </p>
-    </div>
-
-  </div>
-
-  <div class="copyright">
-    © ۱۴۰۵ ابوالفضل رحیمی نسب - تمامی حقوق محفوظ است
-  </div>
+<div class="copy">
+© ۱۴۰۵ ابوالفضل رحیمی نسب — تمامی حقوق محفوظ است
+</div>
 
 </footer>
 
@@ -712,23 +720,21 @@ footer a{
 
 function searchProducts(value){
 
-  value = value.trim().toLowerCase();
+value=value.trim().toLowerCase();
 
-  const products =
-    document.querySelectorAll(".product");
+const products=document.querySelectorAll(".product");
 
-  products.forEach(function(product){
+products.forEach(function(product){
 
-    const text =
-      product.innerText.toLowerCase();
+const text=product.innerText.toLowerCase();
 
-    if(text.includes(value)){
-      product.style.display = "";
-    }else{
-      product.style.display = "none";
-    }
+if(text.includes(value)){
+product.style.display="";
+}else{
+product.style.display="none";
+}
 
-  });
+});
 
 }
 
